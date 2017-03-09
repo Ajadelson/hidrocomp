@@ -44,8 +44,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.admindocs',
     'data',
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -83,12 +85,13 @@ WSGI_APPLICATION = 'hidrocomp.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE' : 'django.contrib.gis.db.backends.postgis',
+        'ENGINE' : 'django.db.backends.postgresql_psycopg2',
         'NAME': 'hidrocomp',
         'USER': 'postgres',
         'PASSWORD': 'eao41335',
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/1.10/ref/settings/#auth-password-validators

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Discretizacao,Reducao,Posto,Fonte,TipoPosto,Localizacao,Unidade,Variavel,NivelConsistencia,SerieReduzida,SerieOriginal
+from .models import Discretizacao,Reducao,Posto,Fonte,TipoPosto,Localizacao,Unidade,Variavel,NivelConsistencia,SerieReduzida,SerieOriginal,Coordenada
 
 class TipoPostoAdmin(admin.ModelAdmin):
     model = TipoPosto
@@ -64,8 +64,9 @@ class SerieOriginalAdmin(admin.ModelAdmin):
 
 
 admin.site.register(TipoPosto,TipoPostoAdmin)
+admin.site.register(Coordenada)
 admin.site.register(Fonte,FonteAdmin)
-admin.site.register(Localizacao,LocalizacaoAdmin)
+admin.site.register(Localizacao)
 admin.site.register(Posto,PostoAdmin)
 admin.site.register(Unidade,UnidadeAdmin)
 admin.site.register(Variavel,VariavelAdmin)

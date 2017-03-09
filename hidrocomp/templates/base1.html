@@ -1,0 +1,122 @@
+<!doctype html>
+{% load staticfiles %}
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+
+<script src="http://code.jquery.com/jquery-1.4.4.min.js"></script>
+    <style type="text/css">
+      html, body, #basicMap {
+          width: 100%;
+          height: 90%;
+          margin: 0;
+      }
+    </style>
+    <script src="http://www.openlayers.org/api/OpenLayers.js"></script>
+    <script>
+      function init() {
+        map = new OpenLayers.Map("basicMap");
+        var mapnik         = new OpenLayers.Layer.OSM();
+        var fromProjection = new OpenLayers.Projection("EPSG:4326");   // Transform from WGS 1984
+        var toProjection   = new OpenLayers.Projection("EPSG:900913"); // to Spherical Mercator Projection
+        var position       = new OpenLayers.LonLat(73.84,18.52).transform( fromProjection, toProjection);
+        var zoom           = 15; 
+ 
+        map.addLayer(mapnik);
+            var lonLat = new OpenLayers.LonLat( -0.1279688 ,51.5077286 )
+          .transform(
+            new OpenLayers.Projection("EPSG:4326"), // transform from WGS 1984
+            map.getProjectionObject() // to Spherical Mercator Projection
+          );
+          
+    var zoom=16;
+
+ var marker = new khtml.maplib.overlay.Marker({
+        position: new khtml.maplib.LatLng(-25.363882,131.044922), 
+        map: map,
+        title:"static marker"
+});
+    map.setCenter (lonLat, zoom);
+      }
+    </script>
+    
+    <!--
+<script>
+var map;
+function initialize() {
+    map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 8,
+        center: new google.maps.LatLng(-9.655993, -35.731722),
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    });
+}
+   
+</script>
+<script>
+var marker;
+var waypointByID = {};
+{% for waypoint in waypoints %}
+waypointByID[{{waypoint.id}}] = {
+    name: "{{waypoint.name}}",
+    lat: {{waypoint.geometry.y}},
+    lng: {{waypoint.geometry.x}}
+};
+{% endfor %}
+$(document).ready(function () {
+    function activateWaypoints() {
+        // Add waypoint click handler
+        $('.waypoint').each(function () {
+            $(this).click(function() {
+                var waypoint = waypointByID[this.id];
+                var center = new google.maps.LatLng(waypoint.lat, waypoint.lng);
+                if (marker) marker.setMap();
+                marker = new google.maps.Marker({map: map, position: center,icon:"{% static 'Geolocalizzazione.png' %}"});
+                marker.addListener('click', function() {
+    window.location.href = "/posto/1";
+  });
+
+                map.panTo(center);
+            }).hover(
+                function () {this.className = this.className.replace('OFF', 'ON');},
+                function () {this.className = this.className.replace('ON', 'OFF');}
+            );
+        });
+    }
+    activateWaypoints();
+});-->
+</script>
+<style>
+    #waypoints {overflow: auto; width: 500px; height: 100px}
+    .linkOFF {color: darkblue}
+    .linkON {color: white; background-color: darkblue}
+</style>
+<style>
+    body {font-family: sans-serif}
+    #map {width: 500pt; height: 300pt}
+</style>
+</head>
+<body onload="init();">
+
+   
+<script type="text/javascript" src="http://maplib.khtml.org/khtml.maplib/khtml_all.js"> </script>
+<script type="text/javascript" > 
+var map=khtml.maplib.Map(document.getElementById("map"));
+map.centerAndZoom(new khtml.maplib.LatLng(-9.655993, -35.731722),16) //latitude, longitude, zoom
+
+var marker = new khtml.maplib.overlay.Marker({
+        position: new khtml.maplib.LatLng(-9.655993, -35.731722), 
+        map: map,
+        title:"static marker"
+});
+var infobox = new khtml.maplib.overlay.InfoWindow({content: "This is a marker-infobox!"});
+
+marker.attachEvent( 'click', function() {
+    	infobox.open(map, this);
+});
+</script>
+    <div id=waypoints>
+        {% block body %}{% endblock %}
+    </div>
+
+</body>
+</html>

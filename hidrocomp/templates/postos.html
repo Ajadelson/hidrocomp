@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block body %}
+<h1>Postos Disponíveis</h1>
+<div id=map></div>
+    
+
+<a href="/postos/novo"><p>Criar novo posto</p></a>
+<ul>
+{% for posto in postos %}
+   
+    <a href="/posto/{{ posto.id }}"><li>{{posto}}</li></a>
+    
+    
+{% endfor %}
+</ul>
+<!--
+<h3>Postos com dados completos</h3>
+    <img src="/gantt/" alt="" style="max-width:100%;">
+    -->
+{% endblock %}
+
+
+
+
+
+    

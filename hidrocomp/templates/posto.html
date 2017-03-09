@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block body %}
+<h1>Posto</h1>
+
+<h3>Descrição do Posto:</h3>
+<ul>
+    <li>Nome: {{posto.nome}}</li>
+    <li>Fonte: {{posto.fonte}}</li>
+    <li>Tipo: {{posto.tipo_posto}}</li>
+    <li><a href="/posto/{{ posto.id }}/seleciona_dados/">Escolher dados para análise</a></li>
+</ul>
+
+<table border="1" class="table table-hover">
+    <tr>
+       <td>Posto</td>
+       <td>Discretizacao</td>
+       <td>Variavel</td>
+       <td>Unidade</td>
+       <td>Tipo_Dado</td>
+        
+    </tr>
+{% for serie in series %}
+   
+    <tr>
+      
+       <td> <a href="/posto/{{ posto.id }}/seleciona_dados/">{{serie.posto}}</a></td>
+       <td><a href="/posto/{{ posto.id }}/seleciona_dados/">{{serie.discretizacao}}</a></td>
+       <td><a href="/posto/{{ posto.id }}/seleciona_dados/">{{serie.variavel}}</a></td>
+       <td><a href="/posto/{{ posto.id }}/seleciona_dados/">{{serie.unidade}}</a></td>
+       <td><a href="/posto/{{ posto.id }}/seleciona_dados/">{{serie.tipo_dado}}</a></td>
+       
+  
+        
+    </tr>
+    
+{% endfor %}
+</table>
+
+<h3>Curva-Chave:</h3>
+    <img src="/posto/{{ posto.Posto_id }}/curva_chave.png" alt="" style="max-width:100%;">
+{% endblock %}

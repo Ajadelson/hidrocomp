@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block body %}
+<h1>Séries de dados disponíveis</h1>
+<table border="1" class="table table-hover">
+    <tr>
+       <td>Posto</td>
+       <td>Discretizacao</td>
+       <td>Variavel</td>
+       <td>Unidade</td>
+       <td>Tipo_Dado</td>
+        
+    </tr>
+{% for serie in series %}
+   
+    <tr>
+      
+       <td> <a href="/serie/{{serie.id}}">{{serie.posto}}</a></td>
+       <td><a href="/serie/{{serie.id}}">{{serie.discretizacao}}</a></td>
+       <td><a href="/serie/{{serie.id}}">{{serie.variavel}}</a></td>
+       <td><a href="/serie/{{serie.id}}">{{serie.unidade}}</a></td>
+       <td><a href="/serie/{{serie.id}}">{{serie.tipo_dado}}</a></td>
+       
+  
+        
+    </tr>
+    
+{% endfor %}
+</table>
+{% endblock %}
