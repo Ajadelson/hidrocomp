@@ -5,6 +5,12 @@ from data.models import Posto,SerieOriginal,Variavel,Reducao,SerieTemporal,Discr
 from .forms import FormSelecionaPosto,FormDadosPosto
 from numpy import nan,mean
 from django.db.models import Q
+# import the logging library
+import logging
+logging.basicConfig(filename="Logs.log",level=logging.INFO)
+
+# Get an instance of a logger
+
 '''
 def cria_imagens():
     buffer1 = HttpResponse(content_type = "image/png")
@@ -21,7 +27,7 @@ def cria_imagens():
     return buffer1
 '''
 funcoes_reducao = {'máxima':max,'mínima':min,'soma':sum, 'média':mean}
-
+meses = {1:"JAN",2:"FEV",3:"MAR",4:"APR",5:"MAY",6:"JUN",7:"JUL",8:"AUG",9:"SEP",10:"OCT",11:"NOV",12:"DEC"}
 
 
 def filtra_temporais_por_originais(originais):
@@ -30,25 +36,27 @@ def filtra_temporais_por_originais(originais):
     for item in queries:
         query |= item
     return query
-    
-dic = {"jan":"1","fev":"2"}
 
 
 def dados_diarios_pandas(dados_temporais,obs):
     #dados_temporais = [d for d in dados_temporais if d.data_e_hora.year ==1982]
+    consistidos = sorted([d for d in dados_temporais if obs[d.Id]==2],key=lambda x:x.data_e_hora)
+    dados_temporais = consistidos if consistidos else dados_temporais
     dados = [o.dado if not o is None else nan for o in dados_temporais]
     datas = [o.data_e_hora for o in dados_temporais]
-    niveis = [obs[o.Id] for o in dados_temporais]
+    #niveis = [obs[o.Id] for o in dados_temporais]
+    #print(niveis)
     #d=pd.date_range(start=min(datas),end=max(datas))
     #print(d)
-    pf = pd.DataFrame({"dado" : dados,"nivel":niveis}, index=pd.DatetimeIndex(datas))
-    gp = pd.Grouper(freq='D')
+    pf = pd.DataFrame({"dado" : dados}, index=pd.DatetimeIndex(datas))
+    gp = pd.Grouper(freq='D',sort=True)
     pfgp = pf.groupby(gp).mean()
     return pfgp
 
 def sugere_mes_inicio_ano_hidrologico(df):
-    medias_por_mes={i:df[df.index.month==i].mean().item() for i in range(1,13)}
-    return min(medias_por_mes.items(),key=lambda x:x[1])[0]
+    medias_por_mes = df["dado"].groupby(pd.Grouper(freq='M')).mean()
+    minimas_dos_anos = df.groupby(pd.Grouper(freq='AS')).idxmin()
+    return pd.value_counts([d.month for d in minimas_dos_anos["dado"]]).idxmax()
     
 def seleciona_posto(request):
     postos = ((posto.id,posto.nome) for posto in Posto.objects.all())
@@ -63,12 +71,21 @@ def seleciona_posto(request):
             return HttpResponseRedirect(url)
     return render(request,'seleciona_posto.html',{'aba':'postos','form':FormSelecionaPosto(postos=postos)})
 
+def dicionario_de_anos_hidrologicos(df):
+    nmes = sugere_mes_inicio_ano_hidrologico(df)
+    gp = df["dado"].groupby(pd.Grouper(freq="AS-%s"%meses[nmes]))
+
+    #print(gp.groups)
+    dic = dict(list(gp))
+    anos_hidrologicos = {key.year+1:dic[key] for key in dic.keys()}
+    return anos_hidrologicos
+
 def seleciona_dados_posto(request,posto_id):
     posto = Posto.objects.get(id=int(posto_id))
+    originais = SerieOriginal.objects.filter(posto=posto)
+    variaveis_disponiveis = [o.variavel for o in originais]
+    variaveis =((variavel.id,variavel.variavel) for variavel in [v for v in Variavel.objects.all() if v in variaveis_disponiveis])
     if request.method == 'GET':
-        originais = SerieOriginal.objects.filter(posto=posto)
-        variaveis_disponiveis = [o.variavel for o in originais]
-        variaveis =((variavel.id,variavel.variavel) for variavel in [v for v in Variavel.objects.all() if v in variaveis_disponiveis])
         temporais = SerieTemporal.objects.filter(filtra_temporais_por_originais(originais))
         return render(request,'seleciona_dados_posto.html',{'aba':'postos','form':FormDadosPosto(variaveis=list(variaveis))})
     if request.method == 'POST':
@@ -79,12 +96,12 @@ def seleciona_dados_posto(request,posto_id):
             originais = SerieOriginal.objects.filter(posto=posto,variavel=variavel)
             obs = {o.serie_temporal_id:o.tipo_dado.id for o in originais}
             temporais = SerieTemporal.objects.filter(filtra_temporais_por_originais(originais))
-            print(list(set([i.Id for i in temporais])))
-            pf = dados_diarios_pandas(temporais,obs)
-            print(pf)
-            nmes = sugere_mes_inicio_ano_hidrologico(pf)
-            print("Mês:",nmes)
-            gp = pd.Grouper(freq="AS-JUL")
+            diarios = dados_diarios_pandas(temporais,obs)
+            anos_hidrologicos = dicionario_de_anos_hidrologicos(diarios)
+            medias_moveis = {key:pd.rolling_mean(anos_hidrologicos[key], window=30, center=False).min() for key in anos_hidrologicos.keys()}
+            print(medias_moveis[2000])   
+            serie = pd.DataFrame({'dados':list(anos_hidrologicos.values())},index=list(anos_hidrologicos.keys()))
+            
             #discretizacao = Discretizacao.objects.get(codigo_pandas=dados['discretizacao'])
             #reducao = Reducao.objects.get(id=int(dados['reducao']))
             
@@ -95,17 +112,17 @@ def seleciona_dados_posto(request,posto_id):
             #print(pd.rolling_mean(pf, window=30, center=False))
             #gp = pd.Grouper(freq=discretizacao.codigo_pandas)
             
+            #dic = dict([gp])
+            '''
             
-            pfgp = pf.groupby(gp)
-            dic = dict(list(pfgp))
-            anos_hidrologicos = {key.year:dic[key] for key in dic.keys()}
+            #
             #.agg(funcoes_reducao[reducao.tipo])
             
-            #print(pd.DataFrame({'dados':list(anos_hidrologicos.values())},index=list(anos_hidrologicos.keys())))
             
+            '''
             return render(request,'seleciona_dados_posto.html',{'aba':'postos','form':form})
     
-    
+#LOGGING: http://james.lin.net.nz/2012/09/19/creating-custom-log-handler-that-logs-to-database-models-in-django/
     
 
 

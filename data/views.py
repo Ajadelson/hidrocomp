@@ -17,7 +17,7 @@ from .models import SerieOriginal,SerieTemporal,Posto,Variavel,NivelConsistencia
 import pandas as pd
 from django.contrib import messages
 
-from .hidroweb import Hidroweb,ONS
+from .le_dados import Hidroweb,ONS
 
 
             
@@ -87,8 +87,7 @@ def cria_posto(request):
             #nome = dados["nome"]
             localizacao = Localizacao.objects.get(id=1)
             postos = Posto.objects.filter(codigo_ana=codigo_ana)
-            estacoes = [codigo_ana,]
-            hid = Hidroweb(estacoes,8,request)
+            hid = Hidroweb(codigo_ana,8,request)
             if postos:
                 messages.add_message(request, messages.ERROR, 'O posto de código %s já existe no sistema.'%postos[0].codigo_ana)
             else:

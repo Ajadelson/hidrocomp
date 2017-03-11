@@ -125,6 +125,46 @@ USE_L10N = True
 
 USE_TZ = True
 
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'debug': {
+            'level': 'DEBUG',
+            'class': 'logging.FileHandler',
+            'filename': fillPath('log/debug.log'),
+        },
+        'info': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': fillPath('log/info.log'),
+        },
+        'warning': {
+            'level': 'WARNING',
+            'class': 'logging.FileHandler',
+            'filename': fillPath('log/warning.log'),
+        },
+        
+    },
+    'loggers': {
+        'debug': {
+            'handlers': ['debug',],
+            'level': 'DEBUG',
+            'propagate': True,
+        },
+        'info': {
+            'handlers': ['info',],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        'warning': {
+            'handlers': ['warning',],
+            'level': 'WARNING',
+            'propagate': True,
+        },
+        
+    },
+}
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.10/howto/static-files/

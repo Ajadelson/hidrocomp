@@ -1,0 +1,2312 @@
+(0.219) SELECT "data_posto"."id", "data_posto"."tipo_posto_id", "data_posto"."fonte_id", "data_posto"."codigo_ana", "data_posto"."nome", "data_posto"."localizacao_id" FROM "data_posto"; args=()
+(0.003) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel"; args=()
+(0.013) SELECT "data_fonte"."id", "data_fonte"."tipo" FROM "data_fonte"; args=()
+(0.003) SELECT "data_tipoposto"."id", "data_tipoposto"."tipo" FROM "data_tipoposto"; args=()
+(0.000) SELECT "data_fonte"."id", "data_fonte"."tipo" FROM "data_fonte"; args=()
+(0.015) SELECT "data_discretizacao"."id", "data_discretizacao"."tipo", "data_discretizacao"."codigo_pandas" FROM "data_discretizacao"; args=()
+(0.005) SELECT "data_reducao"."id", "data_reducao"."tipo" FROM "data_reducao"; args=()
+(0.125) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.015) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.002) SELECT "data_posto"."id", "data_posto"."tipo_posto_id", "data_posto"."fonte_id", "data_posto"."codigo_ana", "data_posto"."nome", "data_posto"."localizacao_id" FROM "data_posto"; args=()
+(0.010) SELECT "data_fonte"."id", "data_fonte"."tipo" FROM "data_fonte" WHERE "data_fonte"."id" = 1; args=(1,)
+(0.001) SELECT "data_fonte"."id", "data_fonte"."tipo" FROM "data_fonte" WHERE "data_fonte"."id" = 1; args=(1,)
+(0.000) SELECT "data_fonte"."id", "data_fonte"."tipo" FROM "data_fonte" WHERE "data_fonte"."id" = 1; args=(1,)
+"GET / HTTP/1.1" 200 3635
+"GET /static/css/ie10-viewport-bug-workaround.css HTTP/1.1" 404 1721
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'dist/js/bootstrap.min.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'assets/js/ie10-viewport-bug-workaround.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+"GET /static/js/ie-emulation-modes-warning.js HTTP/1.1" 404 1709
+Not Found: /dist/js/bootstrap.min.js
+Not Found: /assets/js/ie10-viewport-bug-workaround.js
+"GET /dist/js/bootstrap.min.js HTTP/1.1" 404 2965
+"GET /assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3016
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 2926
+(0.057) SELECT "data_posto"."id", "data_posto"."tipo_posto_id", "data_posto"."fonte_id", "data_posto"."codigo_ana", "data_posto"."nome", "data_posto"."localizacao_id" FROM "data_posto" WHERE "data_posto"."id" = 11; args=(11,)
+(0.003) SELECT "data_fonte"."id", "data_fonte"."tipo" FROM "data_fonte" WHERE "data_fonte"."id" = 1; args=(1,)
+(0.003) SELECT "data_tipoposto"."id", "data_tipoposto"."tipo" FROM "data_tipoposto" WHERE "data_tipoposto"."id" = 1; args=(1,)
+(0.036) SELECT "data_serieoriginal"."id", "data_serieoriginal"."posto_id", "data_serieoriginal"."arquivo_Fonte_data", "data_serieoriginal"."variavel_id", "data_serieoriginal"."tipo_dado_id", "data_serieoriginal"."discretizacao_id", "data_serieoriginal"."unidade_id", "data_serieoriginal"."serie_temporal_id" FROM "data_serieoriginal" WHERE "data_serieoriginal"."posto_id" = 11; args=(11,)
+(0.001) SELECT "data_posto"."id", "data_posto"."tipo_posto_id", "data_posto"."fonte_id", "data_posto"."codigo_ana", "data_posto"."nome", "data_posto"."localizacao_id" FROM "data_posto" WHERE "data_posto"."id" = 11; args=(11,)
+(0.001) SELECT "data_fonte"."id", "data_fonte"."tipo" FROM "data_fonte" WHERE "data_fonte"."id" = 1; args=(1,)
+(0.002) SELECT "data_discretizacao"."id", "data_discretizacao"."tipo", "data_discretizacao"."codigo_pandas" FROM "data_discretizacao" WHERE "data_discretizacao"."id" = 1; args=(1,)
+(0.003) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 2; args=(2,)
+(0.011) SELECT "data_unidade"."id", "data_unidade"."tipo" FROM "data_unidade" WHERE "data_unidade"."id" = 2; args=(2,)
+(0.006) SELECT "data_nivelconsistencia"."id", "data_nivelconsistencia"."tipo" FROM "data_nivelconsistencia" WHERE "data_nivelconsistencia"."id" = 1; args=(1,)
+(0.001) SELECT "data_posto"."id", "data_posto"."tipo_posto_id", "data_posto"."fonte_id", "data_posto"."codigo_ana", "data_posto"."nome", "data_posto"."localizacao_id" FROM "data_posto" WHERE "data_posto"."id" = 11; args=(11,)
+(0.001) SELECT "data_fonte"."id", "data_fonte"."tipo" FROM "data_fonte" WHERE "data_fonte"."id" = 1; args=(1,)
+(0.000) SELECT "data_discretizacao"."id", "data_discretizacao"."tipo", "data_discretizacao"."codigo_pandas" FROM "data_discretizacao" WHERE "data_discretizacao"."id" = 1; args=(1,)
+(0.000) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 2; args=(2,)
+(0.001) SELECT "data_unidade"."id", "data_unidade"."tipo" FROM "data_unidade" WHERE "data_unidade"."id" = 2; args=(2,)
+(0.000) SELECT "data_nivelconsistencia"."id", "data_nivelconsistencia"."tipo" FROM "data_nivelconsistencia" WHERE "data_nivelconsistencia"."id" = 2; args=(2,)
+(0.001) SELECT "data_posto"."id", "data_posto"."tipo_posto_id", "data_posto"."fonte_id", "data_posto"."codigo_ana", "data_posto"."nome", "data_posto"."localizacao_id" FROM "data_posto" WHERE "data_posto"."id" = 11; args=(11,)
+(0.001) SELECT "data_fonte"."id", "data_fonte"."tipo" FROM "data_fonte" WHERE "data_fonte"."id" = 1; args=(1,)
+(0.001) SELECT "data_discretizacao"."id", "data_discretizacao"."tipo", "data_discretizacao"."codigo_pandas" FROM "data_discretizacao" WHERE "data_discretizacao"."id" = 1; args=(1,)
+(0.001) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 1; args=(1,)
+(0.000) SELECT "data_unidade"."id", "data_unidade"."tipo" FROM "data_unidade" WHERE "data_unidade"."id" = 2; args=(2,)
+(0.000) SELECT "data_nivelconsistencia"."id", "data_nivelconsistencia"."tipo" FROM "data_nivelconsistencia" WHERE "data_nivelconsistencia"."id" = 1; args=(1,)
+(0.001) SELECT "data_posto"."id", "data_posto"."tipo_posto_id", "data_posto"."fonte_id", "data_posto"."codigo_ana", "data_posto"."nome", "data_posto"."localizacao_id" FROM "data_posto" WHERE "data_posto"."id" = 11; args=(11,)
+(0.001) SELECT "data_fonte"."id", "data_fonte"."tipo" FROM "data_fonte" WHERE "data_fonte"."id" = 1; args=(1,)
+(0.000) SELECT "data_discretizacao"."id", "data_discretizacao"."tipo", "data_discretizacao"."codigo_pandas" FROM "data_discretizacao" WHERE "data_discretizacao"."id" = 1; args=(1,)
+(0.001) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 1; args=(1,)
+(0.000) SELECT "data_unidade"."id", "data_unidade"."tipo" FROM "data_unidade" WHERE "data_unidade"."id" = 2; args=(2,)
+(0.001) SELECT "data_nivelconsistencia"."id", "data_nivelconsistencia"."tipo" FROM "data_nivelconsistencia" WHERE "data_nivelconsistencia"."id" = 2; args=(2,)
+Exception while resolving variable 'Posto_id' in template 'posto.html'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Posto' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Posto' object has no attribute 'Posto_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'Posto_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [Posto_id] in 'UHE TRÊS MARIAS JUSANTE ANA (41020002)'
+"GET /posto/11 HTTP/1.1" 200 5340
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/static/js/ie-emulation-modes-warning.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+"GET /static/css/ie10-viewport-bug-workaround.css HTTP/1.1" 404 1721
+Not Found: /posto/static/js/ie-emulation-modes-warning.js
+"GET /posto/static/js/ie-emulation-modes-warning.js HTTP/1.1" 404 3028
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'dist/js/bootstrap.min.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /dist/js/bootstrap.min.js
+"GET /dist/js/bootstrap.min.js HTTP/1.1" 404 2965
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'assets/js/ie10-viewport-bug-workaround.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /assets/js/ie10-viewport-bug-workaround.js
+"GET /assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3016
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto//curva_chave.png'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /posto//curva_chave.png
+"GET /posto//curva_chave.png HTTP/1.1" 404 2959
+(0.001) SELECT "data_posto"."id", "data_posto"."tipo_posto_id", "data_posto"."fonte_id", "data_posto"."codigo_ana", "data_posto"."nome", "data_posto"."localizacao_id" FROM "data_posto" WHERE "data_posto"."id" = 11; args=(11,)
+(0.003) SELECT "data_serieoriginal"."id", "data_serieoriginal"."posto_id", "data_serieoriginal"."arquivo_Fonte_data", "data_serieoriginal"."variavel_id", "data_serieoriginal"."tipo_dado_id", "data_serieoriginal"."discretizacao_id", "data_serieoriginal"."unidade_id", "data_serieoriginal"."serie_temporal_id" FROM "data_serieoriginal" WHERE "data_serieoriginal"."posto_id" = 11; args=(11,)
+(0.001) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 2; args=(2,)
+(0.001) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 2; args=(2,)
+(0.000) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 1; args=(1,)
+(0.000) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 1; args=(1,)
+(0.000) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel"; args=()
+"GET /posto/11/seleciona_dados/ HTTP/1.1" 200 5467
+"GET /static/css/ie10-viewport-bug-workaround.css HTTP/1.1" 404 1721
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/dist/js/bootstrap.min.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/assets/js/ie10-viewport-bug-workaround.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+Not Found: /posto/dist/js/bootstrap.min.js
+Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+"GET /posto/dist/js/bootstrap.min.js HTTP/1.1" 404 2983
+"GET /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js HTTP/1.1" 404 3085
+"GET /posto/assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3034
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/dist/js/bootstrap.min.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /posto/dist/js/bootstrap.min.js
+"GET /posto/dist/js/bootstrap.min.js HTTP/1.1" 404 2983
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/assets/js/ie10-viewport-bug-workaround.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+"GET /posto/assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3034
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/favicon.ico'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /posto/favicon.ico
+"GET /posto/favicon.ico HTTP/1.1" 404 2944
+(0.002) SELECT "data_posto"."id", "data_posto"."tipo_posto_id", "data_posto"."fonte_id", "data_posto"."codigo_ana", "data_posto"."nome", "data_posto"."localizacao_id" FROM "data_posto" WHERE "data_posto"."id" = 11; args=(11,)
+(0.002) SELECT "data_serieoriginal"."id", "data_serieoriginal"."posto_id", "data_serieoriginal"."arquivo_Fonte_data", "data_serieoriginal"."variavel_id", "data_serieoriginal"."tipo_dado_id", "data_serieoriginal"."discretizacao_id", "data_serieoriginal"."unidade_id", "data_serieoriginal"."serie_temporal_id" FROM "data_serieoriginal" WHERE "data_serieoriginal"."posto_id" = 11; args=(11,)
+(0.001) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 2; args=(2,)
+(0.000) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 2; args=(2,)
+(0.001) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 1; args=(1,)
+(0.000) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 1; args=(1,)
+(0.000) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel"; args=()
+(0.000) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 1; args=(1,)
+(0.057) SELECT "data_serieoriginal"."id", "data_serieoriginal"."posto_id", "data_serieoriginal"."arquivo_Fonte_data", "data_serieoriginal"."variavel_id", "data_serieoriginal"."tipo_dado_id", "data_serieoriginal"."discretizacao_id", "data_serieoriginal"."unidade_id", "data_serieoriginal"."serie_temporal_id" FROM "data_serieoriginal" WHERE ("data_serieoriginal"."posto_id" = 11 AND "data_serieoriginal"."variavel_id" = 1); args=(11, 1)
+(0.002) SELECT "data_nivelconsistencia"."id", "data_nivelconsistencia"."tipo" FROM "data_nivelconsistencia" WHERE "data_nivelconsistencia"."id" = 1; args=(1,)
+(0.001) SELECT "data_nivelconsistencia"."id", "data_nivelconsistencia"."tipo" FROM "data_nivelconsistencia" WHERE "data_nivelconsistencia"."id" = 2; args=(2,)
+(0.191) SELECT "data_serietemporal"."id", "data_serietemporal"."Id", "data_serietemporal"."dado", "data_serietemporal"."data_e_hora" FROM "data_serietemporal" WHERE ("data_serietemporal"."Id" = 7 OR "data_serietemporal"."Id" = 6); args=(7, 6)
+"POST /posto/11/seleciona_dados/ HTTP/1.1" 200 5527
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+"GET /static/css/ie10-viewport-bug-workaround.css HTTP/1.1" 404 1721
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/dist/js/bootstrap.min.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/assets/js/ie10-viewport-bug-workaround.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+Not Found: /posto/dist/js/bootstrap.min.js
+Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+"GET /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js HTTP/1.1" 404 3085
+"GET /posto/dist/js/bootstrap.min.js HTTP/1.1" 404 2983
+"GET /posto/assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3034
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'series/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /series/
+"GET /series/ HTTP/1.1" 404 2914
+"GET /static/css/ie10-viewport-bug-workaround.css HTTP/1.1" 404 1721
+(0.002) SELECT "data_posto"."id", "data_posto"."tipo_posto_id", "data_posto"."fonte_id", "data_posto"."codigo_ana", "data_posto"."nome", "data_posto"."localizacao_id" FROM "data_posto"; args=()
+(0.001) SELECT "data_fonte"."id", "data_fonte"."tipo" FROM "data_fonte" WHERE "data_fonte"."id" = 1; args=(1,)
+(0.000) SELECT "data_fonte"."id", "data_fonte"."tipo" FROM "data_fonte" WHERE "data_fonte"."id" = 1; args=(1,)
+(0.000) SELECT "data_fonte"."id", "data_fonte"."tipo" FROM "data_fonte" WHERE "data_fonte"."id" = 1; args=(1,)
+"GET /postos/ HTTP/1.1" 200 3635
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'postos/static/js/ie-emulation-modes-warning.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'dist/js/bootstrap.min.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'assets/js/ie10-viewport-bug-workaround.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+"GET /static/css/ie10-viewport-bug-workaround.css HTTP/1.1" 404 1721
+Not Found: /postos/static/js/ie-emulation-modes-warning.js
+Not Found: /dist/js/bootstrap.min.js
+Not Found: /assets/js/ie10-viewport-bug-workaround.js
+"GET /postos/static/js/ie-emulation-modes-warning.js HTTP/1.1" 404 3031
+"GET /assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3016
+"GET /dist/js/bootstrap.min.js HTTP/1.1" 404 2965
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'assets/js/ie10-viewport-bug-workaround.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /assets/js/ie10-viewport-bug-workaround.js
+"GET /assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3016
+(0.001) SELECT "data_posto"."id", "data_posto"."tipo_posto_id", "data_posto"."fonte_id", "data_posto"."codigo_ana", "data_posto"."nome", "data_posto"."localizacao_id" FROM "data_posto" WHERE "data_posto"."id" = 11; args=(11,)
+(0.001) SELECT "data_fonte"."id", "data_fonte"."tipo" FROM "data_fonte" WHERE "data_fonte"."id" = 1; args=(1,)
+(0.001) SELECT "data_tipoposto"."id", "data_tipoposto"."tipo" FROM "data_tipoposto" WHERE "data_tipoposto"."id" = 1; args=(1,)
+(0.003) SELECT "data_serieoriginal"."id", "data_serieoriginal"."posto_id", "data_serieoriginal"."arquivo_Fonte_data", "data_serieoriginal"."variavel_id", "data_serieoriginal"."tipo_dado_id", "data_serieoriginal"."discretizacao_id", "data_serieoriginal"."unidade_id", "data_serieoriginal"."serie_temporal_id" FROM "data_serieoriginal" WHERE "data_serieoriginal"."posto_id" = 11; args=(11,)
+(0.001) SELECT "data_posto"."id", "data_posto"."tipo_posto_id", "data_posto"."fonte_id", "data_posto"."codigo_ana", "data_posto"."nome", "data_posto"."localizacao_id" FROM "data_posto" WHERE "data_posto"."id" = 11; args=(11,)
+(0.001) SELECT "data_fonte"."id", "data_fonte"."tipo" FROM "data_fonte" WHERE "data_fonte"."id" = 1; args=(1,)
+(0.001) SELECT "data_discretizacao"."id", "data_discretizacao"."tipo", "data_discretizacao"."codigo_pandas" FROM "data_discretizacao" WHERE "data_discretizacao"."id" = 1; args=(1,)
+(0.001) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 2; args=(2,)
+(0.001) SELECT "data_unidade"."id", "data_unidade"."tipo" FROM "data_unidade" WHERE "data_unidade"."id" = 2; args=(2,)
+(0.001) SELECT "data_nivelconsistencia"."id", "data_nivelconsistencia"."tipo" FROM "data_nivelconsistencia" WHERE "data_nivelconsistencia"."id" = 1; args=(1,)
+(0.001) SELECT "data_posto"."id", "data_posto"."tipo_posto_id", "data_posto"."fonte_id", "data_posto"."codigo_ana", "data_posto"."nome", "data_posto"."localizacao_id" FROM "data_posto" WHERE "data_posto"."id" = 11; args=(11,)
+(0.001) SELECT "data_fonte"."id", "data_fonte"."tipo" FROM "data_fonte" WHERE "data_fonte"."id" = 1; args=(1,)
+(0.000) SELECT "data_discretizacao"."id", "data_discretizacao"."tipo", "data_discretizacao"."codigo_pandas" FROM "data_discretizacao" WHERE "data_discretizacao"."id" = 1; args=(1,)
+(0.000) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 2; args=(2,)
+(0.001) SELECT "data_unidade"."id", "data_unidade"."tipo" FROM "data_unidade" WHERE "data_unidade"."id" = 2; args=(2,)
+(0.001) SELECT "data_nivelconsistencia"."id", "data_nivelconsistencia"."tipo" FROM "data_nivelconsistencia" WHERE "data_nivelconsistencia"."id" = 2; args=(2,)
+(0.000) SELECT "data_posto"."id", "data_posto"."tipo_posto_id", "data_posto"."fonte_id", "data_posto"."codigo_ana", "data_posto"."nome", "data_posto"."localizacao_id" FROM "data_posto" WHERE "data_posto"."id" = 11; args=(11,)
+(0.001) SELECT "data_fonte"."id", "data_fonte"."tipo" FROM "data_fonte" WHERE "data_fonte"."id" = 1; args=(1,)
+(0.001) SELECT "data_discretizacao"."id", "data_discretizacao"."tipo", "data_discretizacao"."codigo_pandas" FROM "data_discretizacao" WHERE "data_discretizacao"."id" = 1; args=(1,)
+(0.001) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 1; args=(1,)
+(0.000) SELECT "data_unidade"."id", "data_unidade"."tipo" FROM "data_unidade" WHERE "data_unidade"."id" = 2; args=(2,)
+(0.001) SELECT "data_nivelconsistencia"."id", "data_nivelconsistencia"."tipo" FROM "data_nivelconsistencia" WHERE "data_nivelconsistencia"."id" = 1; args=(1,)
+(0.000) SELECT "data_posto"."id", "data_posto"."tipo_posto_id", "data_posto"."fonte_id", "data_posto"."codigo_ana", "data_posto"."nome", "data_posto"."localizacao_id" FROM "data_posto" WHERE "data_posto"."id" = 11; args=(11,)
+(0.000) SELECT "data_fonte"."id", "data_fonte"."tipo" FROM "data_fonte" WHERE "data_fonte"."id" = 1; args=(1,)
+(0.001) SELECT "data_discretizacao"."id", "data_discretizacao"."tipo", "data_discretizacao"."codigo_pandas" FROM "data_discretizacao" WHERE "data_discretizacao"."id" = 1; args=(1,)
+(0.001) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 1; args=(1,)
+(0.000) SELECT "data_unidade"."id", "data_unidade"."tipo" FROM "data_unidade" WHERE "data_unidade"."id" = 2; args=(2,)
+(0.000) SELECT "data_nivelconsistencia"."id", "data_nivelconsistencia"."tipo" FROM "data_nivelconsistencia" WHERE "data_nivelconsistencia"."id" = 2; args=(2,)
+Exception while resolving variable 'Posto_id' in template 'posto.html'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'Posto' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'Posto' object has no attribute 'Posto_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'Posto_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [Posto_id] in 'UHE TRÊS MARIAS JUSANTE ANA (41020002)'
+"GET /posto/11 HTTP/1.1" 200 5340
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/static/js/ie-emulation-modes-warning.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+"GET /static/css/ie10-viewport-bug-workaround.css HTTP/1.1" 404 1721
+Not Found: /posto/static/js/ie-emulation-modes-warning.js
+"GET /posto/static/js/ie-emulation-modes-warning.js HTTP/1.1" 404 3028
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'dist/js/bootstrap.min.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /dist/js/bootstrap.min.js
+"GET /dist/js/bootstrap.min.js HTTP/1.1" 404 2965
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'assets/js/ie10-viewport-bug-workaround.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto//curva_chave.png'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /assets/js/ie10-viewport-bug-workaround.js
+Not Found: /posto//curva_chave.png
+"GET /assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3016
+"GET /posto//curva_chave.png HTTP/1.1" 404 2959
+(0.003) SELECT "data_posto"."id", "data_posto"."tipo_posto_id", "data_posto"."fonte_id", "data_posto"."codigo_ana", "data_posto"."nome", "data_posto"."localizacao_id" FROM "data_posto" WHERE "data_posto"."id" = 11; args=(11,)
+(0.003) SELECT "data_serieoriginal"."id", "data_serieoriginal"."posto_id", "data_serieoriginal"."arquivo_Fonte_data", "data_serieoriginal"."variavel_id", "data_serieoriginal"."tipo_dado_id", "data_serieoriginal"."discretizacao_id", "data_serieoriginal"."unidade_id", "data_serieoriginal"."serie_temporal_id" FROM "data_serieoriginal" WHERE "data_serieoriginal"."posto_id" = 11; args=(11,)
+(0.001) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 2; args=(2,)
+(0.000) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 2; args=(2,)
+(0.001) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 1; args=(1,)
+(0.001) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 1; args=(1,)
+(0.001) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel"; args=()
+"GET /posto/11/seleciona_dados/ HTTP/1.1" 200 5467
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/dist/js/bootstrap.min.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/assets/js/ie10-viewport-bug-workaround.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+"GET /static/css/ie10-viewport-bug-workaround.css HTTP/1.1" 404 1721
+Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+Not Found: /posto/dist/js/bootstrap.min.js
+Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+"GET /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js HTTP/1.1" 404 3085
+"GET /posto/assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3034
+"GET /posto/dist/js/bootstrap.min.js HTTP/1.1" 404 2983
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/assets/js/ie10-viewport-bug-workaround.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+"GET /posto/assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3034
+(0.002) SELECT "data_posto"."id", "data_posto"."tipo_posto_id", "data_posto"."fonte_id", "data_posto"."codigo_ana", "data_posto"."nome", "data_posto"."localizacao_id" FROM "data_posto" WHERE "data_posto"."id" = 11; args=(11,)
+(0.002) SELECT "data_serieoriginal"."id", "data_serieoriginal"."posto_id", "data_serieoriginal"."arquivo_Fonte_data", "data_serieoriginal"."variavel_id", "data_serieoriginal"."tipo_dado_id", "data_serieoriginal"."discretizacao_id", "data_serieoriginal"."unidade_id", "data_serieoriginal"."serie_temporal_id" FROM "data_serieoriginal" WHERE "data_serieoriginal"."posto_id" = 11; args=(11,)
+(0.001) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 2; args=(2,)
+(0.001) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 2; args=(2,)
+(0.000) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 1; args=(1,)
+(0.001) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 1; args=(1,)
+(0.000) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel"; args=()
+(0.001) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 1; args=(1,)
+(0.000) SELECT "data_serieoriginal"."id", "data_serieoriginal"."posto_id", "data_serieoriginal"."arquivo_Fonte_data", "data_serieoriginal"."variavel_id", "data_serieoriginal"."tipo_dado_id", "data_serieoriginal"."discretizacao_id", "data_serieoriginal"."unidade_id", "data_serieoriginal"."serie_temporal_id" FROM "data_serieoriginal" WHERE ("data_serieoriginal"."posto_id" = 11 AND "data_serieoriginal"."variavel_id" = 1); args=(11, 1)
+(0.001) SELECT "data_nivelconsistencia"."id", "data_nivelconsistencia"."tipo" FROM "data_nivelconsistencia" WHERE "data_nivelconsistencia"."id" = 1; args=(1,)
+(0.001) SELECT "data_nivelconsistencia"."id", "data_nivelconsistencia"."tipo" FROM "data_nivelconsistencia" WHERE "data_nivelconsistencia"."id" = 2; args=(2,)
+(0.078) SELECT "data_serietemporal"."id", "data_serietemporal"."Id", "data_serietemporal"."dado", "data_serietemporal"."data_e_hora" FROM "data_serietemporal" WHERE ("data_serietemporal"."Id" = 7 OR "data_serietemporal"."Id" = 6); args=(7, 6)
+"POST /posto/11/seleciona_dados/ HTTP/1.1" 200 5527
+"GET /static/css/ie10-viewport-bug-workaround.css HTTP/1.1" 404 1721
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/dist/js/bootstrap.min.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/assets/js/ie10-viewport-bug-workaround.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+Not Found: /posto/dist/js/bootstrap.min.js
+Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+"GET /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js HTTP/1.1" 404 3085
+"GET /posto/dist/js/bootstrap.min.js HTTP/1.1" 404 2983
+"GET /posto/assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3034
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/dist/js/bootstrap.min.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /posto/dist/js/bootstrap.min.js
+"GET /posto/dist/js/bootstrap.min.js HTTP/1.1" 404 2983
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/assets/js/ie10-viewport-bug-workaround.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+"GET /posto/assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3034
+(0.001) SELECT "data_posto"."id", "data_posto"."tipo_posto_id", "data_posto"."fonte_id", "data_posto"."codigo_ana", "data_posto"."nome", "data_posto"."localizacao_id" FROM "data_posto" WHERE "data_posto"."id" = 11; args=(11,)
+(0.003) SELECT "data_serieoriginal"."id", "data_serieoriginal"."posto_id", "data_serieoriginal"."arquivo_Fonte_data", "data_serieoriginal"."variavel_id", "data_serieoriginal"."tipo_dado_id", "data_serieoriginal"."discretizacao_id", "data_serieoriginal"."unidade_id", "data_serieoriginal"."serie_temporal_id" FROM "data_serieoriginal" WHERE "data_serieoriginal"."posto_id" = 11; args=(11,)
+(0.001) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 2; args=(2,)
+(0.001) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 2; args=(2,)
+(0.000) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 1; args=(1,)
+(0.000) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 1; args=(1,)
+(0.000) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel"; args=()
+(0.000) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 2; args=(2,)
+(0.000) SELECT "data_serieoriginal"."id", "data_serieoriginal"."posto_id", "data_serieoriginal"."arquivo_Fonte_data", "data_serieoriginal"."variavel_id", "data_serieoriginal"."tipo_dado_id", "data_serieoriginal"."discretizacao_id", "data_serieoriginal"."unidade_id", "data_serieoriginal"."serie_temporal_id" FROM "data_serieoriginal" WHERE ("data_serieoriginal"."posto_id" = 11 AND "data_serieoriginal"."variavel_id" = 2); args=(11, 2)
+(0.001) SELECT "data_nivelconsistencia"."id", "data_nivelconsistencia"."tipo" FROM "data_nivelconsistencia" WHERE "data_nivelconsistencia"."id" = 1; args=(1,)
+(0.000) SELECT "data_nivelconsistencia"."id", "data_nivelconsistencia"."tipo" FROM "data_nivelconsistencia" WHERE "data_nivelconsistencia"."id" = 2; args=(2,)
+(0.081) SELECT "data_serietemporal"."id", "data_serietemporal"."Id", "data_serietemporal"."dado", "data_serietemporal"."data_e_hora" FROM "data_serietemporal" WHERE ("data_serietemporal"."Id" = 5 OR "data_serietemporal"."Id" = 4); args=(5, 4)
+"POST /posto/11/seleciona_dados/ HTTP/1.1" 200 5527
+"GET /static/css/ie10-viewport-bug-workaround.css HTTP/1.1" 404 1721
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/dist/js/bootstrap.min.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/assets/js/ie10-viewport-bug-workaround.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+Not Found: /posto/dist/js/bootstrap.min.js
+Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+"GET /posto/dist/js/bootstrap.min.js HTTP/1.1" 404 2983
+"GET /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js HTTP/1.1" 404 3085
+"GET /posto/assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3034
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/dist/js/bootstrap.min.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /posto/dist/js/bootstrap.min.js
+"GET /posto/dist/js/bootstrap.min.js HTTP/1.1" 404 2983
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/assets/js/ie10-viewport-bug-workaround.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+"GET /posto/assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3034
+(0.002) SELECT "data_posto"."id", "data_posto"."tipo_posto_id", "data_posto"."fonte_id", "data_posto"."codigo_ana", "data_posto"."nome", "data_posto"."localizacao_id" FROM "data_posto"; args=()
+(0.001) SELECT "data_fonte"."id", "data_fonte"."tipo" FROM "data_fonte" WHERE "data_fonte"."id" = 1; args=(1,)
+(0.001) SELECT "data_fonte"."id", "data_fonte"."tipo" FROM "data_fonte" WHERE "data_fonte"."id" = 1; args=(1,)
+(0.000) SELECT "data_fonte"."id", "data_fonte"."tipo" FROM "data_fonte" WHERE "data_fonte"."id" = 1; args=(1,)
+"GET / HTTP/1.1" 200 3635
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'dist/js/bootstrap.min.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'assets/js/ie10-viewport-bug-workaround.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+"GET /static/css/ie10-viewport-bug-workaround.css HTTP/1.1" 404 1721
+"GET /static/js/ie-emulation-modes-warning.js HTTP/1.1" 404 1709
+Not Found: /dist/js/bootstrap.min.js
+Not Found: /assets/js/ie10-viewport-bug-workaround.js
+"GET /dist/js/bootstrap.min.js HTTP/1.1" 404 2965
+"GET /assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3016
+"GET / HTTP/1.1" 200 3635
+Not Found: /dist/js/bootstrap.min.js
+Not Found: /assets/js/ie10-viewport-bug-workaround.js
+"GET /dist/js/bootstrap.min.js HTTP/1.1" 404 2965
+"GET /assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3016
+"GET /static/css/ie10-viewport-bug-workaround.css HTTP/1.1" 404 1721
+"GET /static/js/ie-emulation-modes-warning.js HTTP/1.1" 404 1709
+Not Found: /dist/js/bootstrap.min.js
+"GET /dist/js/bootstrap.min.js HTTP/1.1" 404 2965
+Not Found: /assets/js/ie10-viewport-bug-workaround.js
+"GET /assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3016
+"GET /posto/10 HTTP/1.1" 200 4092
+Not Found: /posto/static/js/ie-emulation-modes-warning.js
+"GET /static/css/ie10-viewport-bug-workaround.css HTTP/1.1" 404 1721
+"GET /posto/static/js/ie-emulation-modes-warning.js HTTP/1.1" 404 3028
+Not Found: /dist/js/bootstrap.min.js
+"GET /dist/js/bootstrap.min.js HTTP/1.1" 404 2965
+Not Found: /assets/js/ie10-viewport-bug-workaround.js
+Not Found: /posto//curva_chave.png
+"GET /posto//curva_chave.png HTTP/1.1" 404 2959
+"GET /assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3016
+"GET /posto/10/seleciona_dados/ HTTP/1.1" 200 5433
+"GET /static/css/ie10-viewport-bug-workaround.css HTTP/1.1" 404 1721
+Not Found: /posto/dist/js/bootstrap.min.js
+Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+"GET /posto/dist/js/bootstrap.min.js HTTP/1.1" 404 2983
+"GET /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js HTTP/1.1" 404 3085
+"GET /posto/assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3034
+Not Found: /posto/dist/js/bootstrap.min.js
+"GET /posto/dist/js/bootstrap.min.js HTTP/1.1" 404 2983
+Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+"GET /posto/assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3034
+"POST /posto/10/seleciona_dados/ HTTP/1.1" 200 5493
+Not Found: /posto/dist/js/bootstrap.min.js
+Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+"GET /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js HTTP/1.1" 404 3085
+"GET /posto/dist/js/bootstrap.min.js HTTP/1.1" 404 2983
+"GET /static/css/ie10-viewport-bug-workaround.css HTTP/1.1" 404 1721
+"GET /posto/assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3034
+Not Found: /posto/dist/js/bootstrap.min.js
+"GET /posto/dist/js/bootstrap.min.js HTTP/1.1" 404 2983
+Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+"GET /posto/assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3034
+(0.002) SELECT "data_posto"."id", "data_posto"."tipo_posto_id", "data_posto"."fonte_id", "data_posto"."codigo_ana", "data_posto"."nome", "data_posto"."localizacao_id" FROM "data_posto"; args=()
+(0.001) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel"; args=()
+(0.001) SELECT "data_fonte"."id", "data_fonte"."tipo" FROM "data_fonte"; args=()
+(0.001) SELECT "data_tipoposto"."id", "data_tipoposto"."tipo" FROM "data_tipoposto"; args=()
+(0.000) SELECT "data_fonte"."id", "data_fonte"."tipo" FROM "data_fonte"; args=()
+(0.001) SELECT "data_discretizacao"."id", "data_discretizacao"."tipo", "data_discretizacao"."codigo_pandas" FROM "data_discretizacao"; args=()
+(0.001) SELECT "data_reducao"."id", "data_reducao"."tipo" FROM "data_reducao"; args=()
+(0.006) 
+            SELECT c.relname, c.relkind
+            FROM pg_catalog.pg_class c
+            LEFT JOIN pg_catalog.pg_namespace n ON n.oid = c.relnamespace
+            WHERE c.relkind IN ('r', 'v')
+                AND n.nspname NOT IN ('pg_catalog', 'pg_toast')
+                AND pg_catalog.pg_table_is_visible(c.oid); args=None
+(0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+(0.002) SELECT "data_posto"."id", "data_posto"."tipo_posto_id", "data_posto"."fonte_id", "data_posto"."codigo_ana", "data_posto"."nome", "data_posto"."localizacao_id" FROM "data_posto" WHERE "data_posto"."id" = 10; args=(10,)
+(0.002) SELECT "data_serieoriginal"."id", "data_serieoriginal"."posto_id", "data_serieoriginal"."arquivo_Fonte_data", "data_serieoriginal"."variavel_id", "data_serieoriginal"."tipo_dado_id", "data_serieoriginal"."discretizacao_id", "data_serieoriginal"."unidade_id", "data_serieoriginal"."serie_temporal_id" FROM "data_serieoriginal" WHERE "data_serieoriginal"."posto_id" = 10; args=(10,)
+(0.002) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 2; args=(2,)
+(0.001) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel"; args=()
+"GET /posto/10/seleciona_dados/ HTTP/1.1" 200 5433
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/dist/js/bootstrap.min.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/assets/js/ie10-viewport-bug-workaround.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+"GET /static/css/ie10-viewport-bug-workaround.css HTTP/1.1" 404 1721
+Not Found: /posto/dist/js/bootstrap.min.js
+Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+"GET /posto/dist/js/bootstrap.min.js HTTP/1.1" 404 2983
+"GET /posto/assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3034
+"GET /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js HTTP/1.1" 404 3085
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/dist/js/bootstrap.min.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /posto/dist/js/bootstrap.min.js
+"GET /posto/dist/js/bootstrap.min.js HTTP/1.1" 404 2983
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/assets/js/ie10-viewport-bug-workaround.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+"GET /posto/assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3034
+(0.002) SELECT "data_posto"."id", "data_posto"."tipo_posto_id", "data_posto"."fonte_id", "data_posto"."codigo_ana", "data_posto"."nome", "data_posto"."localizacao_id" FROM "data_posto" WHERE "data_posto"."id" = 10; args=(10,)
+(0.002) SELECT "data_serieoriginal"."id", "data_serieoriginal"."posto_id", "data_serieoriginal"."arquivo_Fonte_data", "data_serieoriginal"."variavel_id", "data_serieoriginal"."tipo_dado_id", "data_serieoriginal"."discretizacao_id", "data_serieoriginal"."unidade_id", "data_serieoriginal"."serie_temporal_id" FROM "data_serieoriginal" WHERE "data_serieoriginal"."posto_id" = 10; args=(10,)
+(0.001) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 2; args=(2,)
+(0.001) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel"; args=()
+(0.000) SELECT "data_variavel"."id", "data_variavel"."variavel", "data_variavel"."codigo_ana" FROM "data_variavel" WHERE "data_variavel"."id" = 2; args=(2,)
+(0.001) SELECT "data_serieoriginal"."id", "data_serieoriginal"."posto_id", "data_serieoriginal"."arquivo_Fonte_data", "data_serieoriginal"."variavel_id", "data_serieoriginal"."tipo_dado_id", "data_serieoriginal"."discretizacao_id", "data_serieoriginal"."unidade_id", "data_serieoriginal"."serie_temporal_id" FROM "data_serieoriginal" WHERE ("data_serieoriginal"."posto_id" = 10 AND "data_serieoriginal"."variavel_id" = 2); args=(10, 2)
+(0.001) SELECT "data_nivelconsistencia"."id", "data_nivelconsistencia"."tipo" FROM "data_nivelconsistencia" WHERE "data_nivelconsistencia"."id" = 1; args=(1,)
+(0.021) SELECT "data_serietemporal"."id", "data_serietemporal"."Id", "data_serietemporal"."dado", "data_serietemporal"."data_e_hora" FROM "data_serietemporal" WHERE "data_serietemporal"."Id" = 3; args=(3,)
+"POST /posto/10/seleciona_dados/ HTTP/1.1" 200 5493
+"GET /static/css/ie10-viewport-bug-workaround.css HTTP/1.1" 404 1721
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/dist/js/bootstrap.min.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/assets/js/ie10-viewport-bug-workaround.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+Not Found: /posto/dist/js/bootstrap.min.js
+Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+"GET /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js HTTP/1.1" 404 3085
+"GET /posto/dist/js/bootstrap.min.js HTTP/1.1" 404 2983
+"GET /posto/assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3034
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/dist/js/bootstrap.min.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /posto/dist/js/bootstrap.min.js
+"GET /posto/dist/js/bootstrap.min.js HTTP/1.1" 404 2983
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'posto/assets/js/ie10-viewport-bug-workaround.js'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+"GET /posto/assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3034
+Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 172, in _get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "C:\Python36\lib\site-packages\django\urls\resolvers.py", line 300, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.urls.exceptions.Resolver404: {'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLPattern atualiza_pelo_hidroweb ^atualizar/web/$>], [<RegexURLPattern cria_posto ^postos/novo/$>], [<RegexURLPattern seleciona_posto ^postos/seleciona/$>], [<RegexURLPattern seleciona_dados_posto ^posto/(?P<posto_id>\d+)/seleciona_dados/$>], [<RegexURLPattern posto ^posto/(?P<posto_id>\d+)$>], [<RegexURLPattern postos ^postos/$>], [<RegexURLPattern postos ^$>]], 'path': 'series/'}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 885, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 893, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 900, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\template\base.py", line 907, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+Not Found: /series/
+"GET /series/ HTTP/1.1" 404 2914

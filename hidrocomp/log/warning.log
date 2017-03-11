@@ -1,0 +1,42 @@
+"GET /static/css/ie10-viewport-bug-workaround.css HTTP/1.1" 404 1721
+Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+Not Found: /posto/dist/js/bootstrap.min.js
+Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+"GET /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js HTTP/1.1" 404 3085
+"GET /posto/dist/js/bootstrap.min.js HTTP/1.1" 404 2983
+"GET /posto/assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3034
+Not Found: /posto/dist/js/bootstrap.min.js
+"GET /posto/dist/js/bootstrap.min.js HTTP/1.1" 404 2983
+Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+"GET /posto/assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3034
+"GET /static/css/ie10-viewport-bug-workaround.css HTTP/1.1" 404 1721
+Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+Not Found: /posto/dist/js/bootstrap.min.js
+Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+"GET /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js HTTP/1.1" 404 3085
+"GET /posto/assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3034
+"GET /posto/dist/js/bootstrap.min.js HTTP/1.1" 404 2983
+Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+"GET /posto/assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3034
+"GET /static/css/ie10-viewport-bug-workaround.css HTTP/1.1" 404 1721
+Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+Not Found: /posto/dist/js/bootstrap.min.js
+"GET /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js HTTP/1.1" 404 3085
+"GET /posto/dist/js/bootstrap.min.js HTTP/1.1" 404 2983
+Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+"GET /posto/assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3034
+Not Found: /posto/dist/js/bootstrap.min.js
+"GET /posto/dist/js/bootstrap.min.js HTTP/1.1" 404 2983
+Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+"GET /posto/assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3034
+"GET /static/css/ie10-viewport-bug-workaround.css HTTP/1.1" 404 1721
+Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+Not Found: /posto/dist/js/bootstrap.min.js
+Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+"GET /posto/dist/js/bootstrap.min.js HTTP/1.1" 404 2983
+"GET /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js HTTP/1.1" 404 3085
+"GET /posto/assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3034
+Not Found: /posto/dist/js/bootstrap.min.js
+"GET /posto/dist/js/bootstrap.min.js HTTP/1.1" 404 2983
+Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+"GET /posto/assets/js/ie10-viewport-bug-workaround.js HTTP/1.1" 404 3034
