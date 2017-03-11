@@ -15,10 +15,7 @@ class Localizacao(models.Model):
 
     def __unicode__(self):
         return '%s %s' % (self.coordenadas.x, self.coordenadas.y)
-    
-    
-    
-    
+
     
 from django.utils.translation import ugettext_lazy as _
 

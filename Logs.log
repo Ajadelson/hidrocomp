@@ -406,3 +406,64 @@ WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.
 WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
 WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
 WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /series/
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /posto/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto//curva_chave.png
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/favicon.ico
+ERROR:django.request:Internal Server Error: /posto/11/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 101, in seleciona_dados_posto
+    anos_hidrologicos = dicionario_de_anos_hidrologicos(médias_móveis_por_dia)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 75, in dicionario_de_anos_hidrologicos
+    nmes = sugere_mes_inicio_ano_hidrologico(df)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 57, in sugere_mes_inicio_ano_hidrologico
+    medias_por_mes = df["dado"].groupby(pd.Grouper(freq='M')).mean()
+  File "C:\Python36\lib\site-packages\pandas\core\window.py", line 167, in __getattr__
+    (type(self).__name__, attr))
+AttributeError: 'Rolling' object has no attribute 'groupby'
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js

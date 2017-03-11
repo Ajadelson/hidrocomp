@@ -27,7 +27,7 @@ def cria_imagens():
     return buffer1
 '''
 funcoes_reducao = {'máxima':max,'mínima':min,'soma':sum, 'média':mean}
-meses = {1:"JAN",2:"FEV",3:"MAR",4:"APR",5:"MAY",6:"JUN",7:"JUL",8:"AUG",9:"SEP",10:"OCT",11:"NOV",12:"DEC"}
+meses = {1:"JAN",2:"FEB",3:"MAR",4:"APR",5:"MAY",6:"JUN",7:"JUL",8:"AUG",9:"SEP",10:"OCT",11:"NOV",12:"DEC"}
 
 
 def filtra_temporais_por_originais(originais):
@@ -37,6 +37,13 @@ def filtra_temporais_por_originais(originais):
         query |= item
     return query
 
+def get_id():
+    if SerieOriginal.objects.count()>0:
+        o = [o.serie_temporal_id for o in SerieOriginal.objects.all()]
+        r = [o.serie_temporal_id for o in SerieReduzida.objects.all()]
+        j = max(o.extend(r))+1 if r else o
+    else:
+        j=1
 
 def dados_diarios_pandas(dados_temporais,obs):
     #dados_temporais = [d for d in dados_temporais if d.data_e_hora.year ==1982]
@@ -74,10 +81,8 @@ def seleciona_posto(request):
 def dicionario_de_anos_hidrologicos(df):
     nmes = sugere_mes_inicio_ano_hidrologico(df)
     gp = df["dado"].groupby(pd.Grouper(freq="AS-%s"%meses[nmes]))
-
-    #print(gp.groups)
     dic = dict(list(gp))
-    anos_hidrologicos = {key.year+1:dic[key] for key in dic.keys()}
+    anos_hidrologicos = {key.year:dic[key] for key in dic.keys()}
     return anos_hidrologicos
 
 def seleciona_dados_posto(request,posto_id):
@@ -97,10 +102,11 @@ def seleciona_dados_posto(request,posto_id):
             obs = {o.serie_temporal_id:o.tipo_dado.id for o in originais}
             temporais = SerieTemporal.objects.filter(filtra_temporais_por_originais(originais))
             diarios = dados_diarios_pandas(temporais,obs)
-            anos_hidrologicos = dicionario_de_anos_hidrologicos(diarios)
-            medias_moveis = {key:pd.rolling_mean(anos_hidrologicos[key], window=30, center=False).min() for key in anos_hidrologicos.keys()}
-            print(medias_moveis[2000])   
-            serie = pd.DataFrame({'dados':list(anos_hidrologicos.values())},index=list(anos_hidrologicos.keys()))
+            médias_móveis_por_dia = diarios.rolling(window=30,center=False).mean()
+            anos_hidrologicos = dicionario_de_anos_hidrologicos(médias_móveis_por_dia)
+            medias_moveis = {key:anos_hidrologicos[key].min() for key in anos_hidrologicos.keys()}  
+            print(medias_moveis)
+            #serie = pd.DataFrame({'dados':list(anos_hidrologicos.values())},index=list(anos_hidrologicos.keys()))
             
             #discretizacao = Discretizacao.objects.get(codigo_pandas=dados['discretizacao'])
             #reducao = Reducao.objects.get(id=int(dados['reducao']))
