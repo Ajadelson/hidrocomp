@@ -1,6 +1,7 @@
 import pandas as pd
-from data.models import Posto,SerieOriginal,Variavel,Reducao,SerieTemporal,Discretizacao,SerieReduzida#,NivelConsistencia,Unidade
 from numpy import nan,mean
+from data.models import Posto,SerieOriginal,Variavel,Reducao,SerieTemporal,Discretizacao,SerieReduzida#,NivelConsistencia,Unidade
+
 
 funcoes_reducao = {'máxima':max,'mínima':min,'soma':sum, 'média':mean}
 meses = {1:"JAN",2:"FEB",3:"MAR",4:"APR",5:"MAY",6:"JUN",7:"JUL",8:"AUG",9:"SEP",10:"OCT",11:"NOV",12:"DEC"}
@@ -19,6 +20,7 @@ class EcoHidro(object):
         id_tipo_dado = 2 if 2 in [o.tipo_dado.id for o in originais] else 1
         self.original = [o for o in originais if o.tipo_dado.id == id_tipo_dado][0]
         return self.original
+    
     def cria_dados_diarios_pandas(self,dados_temporais):
         self.dados_temporais = dados_temporais
         dados = [o.dado if not o is None else nan for o in dados_temporais]
@@ -27,6 +29,7 @@ class EcoHidro(object):
         gp = pd.Grouper(freq='D',sort=True)
         self.dados_diarios = pf.groupby(gp).mean()
         return self.dados_diarios
+    
     def get_id_temporal(self):
         if SerieOriginal.objects.count()>0:
             o = [o.serie_temporal_id for o in SerieOriginal.objects.all()]
@@ -37,12 +40,11 @@ class EcoHidro(object):
         else:
             return 1
 
-
-
     def sugere_mes_inicio_ano_hidrologico(self,df):
         medias_por_mes = df["dado"].groupby(pd.Grouper(freq='M')).mean()
         minimas_dos_anos = df.groupby(pd.Grouper(freq='AS')).idxmin()
         return pd.value_counts([d.month for d in minimas_dos_anos["dado"]]).idxmax()
+    
     def criar_temporal(self,dados,datas):
         Id = get_id_temporal()
         dados_temporais = list(zip(datas,dados))
@@ -54,18 +56,18 @@ class EcoHidro(object):
                     ])
         print("criado")
         return Id
+    
     def dicionario_de_anos_hidrologicos(self,df):
         nmes = self.sugere_mes_inicio_ano_hidrologico(df)
         gp = df["dado"].groupby(pd.Grouper(freq="AS-%s"%meses[nmes]))
         dic = dict(list(gp))
         anos_hidrologicos = {key.year:dic[key] for key in dic.keys()}
         return anos_hidrologicos
+    
     def obter_series_reduzidas(self):
         return SerieReduzida.objects.filter(
                 serie_original = self.original,discretizacao=self.discretizacao,reducao=self.reducao)
         
-    
-    
     def prepara_serie_reduzida(self):
         temporais = SerieTemporal.objects.filter(Id=self.original.serie_temporal_id)
         diarios = self.cria_dados_diarios_pandas(temporais)
