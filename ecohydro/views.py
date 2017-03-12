@@ -1,6 +1,7 @@
 import logging
 from numpy import nan,mean
 import pandas as pd
+from datetime import datetime
 from django.db.models import Q
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
@@ -25,6 +26,7 @@ def seleciona_posto(request):
     return render(request,'seleciona_posto.html',{'aba':'postos','form':FormSelecionaPosto(postos=postos)})
 
 def seleciona_dados_posto(request,posto_id):
+    data = datetime.now()
     posto = Posto.objects.get(id=int(posto_id))
     ecohidro = EcoHidro(posto)
     #originais = SerieOriginal.objects.filter(posto=posto)
@@ -43,8 +45,10 @@ def seleciona_dados_posto(request,posto_id):
                 print("ACHOU REDUZIDA")
                 for i in SerieTemporal.objects.filter(Id=reduzida[0].serie_temporal_id):
                     print(i.data_e_hora,i.dado)
+                print("Tempode execução: " + str(datetime.now()-data))
                 return render(request,'seleciona_dados_posto.html',{'aba':'postos','form':form})
             ecohidro.prepara_serie_reduzida()
+            print("Tempode execução: " + str(datetime.now()-data))
             return render(request,'seleciona_dados_posto.html',{'aba':'postos','form':form})
     
 '''

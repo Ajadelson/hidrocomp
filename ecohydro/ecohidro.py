@@ -34,8 +34,10 @@ class EcoHidro(object):
         if SerieOriginal.objects.count()>0:
             o = [o.serie_temporal_id for o in SerieOriginal.objects.all()]
             r = [o.serie_temporal_id for o in SerieReduzida.objects.all()]
+            t = SerieTemporal.objects.latest("Id").Id
             if r:
                 o.extend(r)
+            o.append(t)
             return max(o)+1
         else:
             return 1
@@ -46,7 +48,7 @@ class EcoHidro(object):
         return pd.value_counts([d.month for d in minimas_dos_anos["dado"]]).idxmax()
     
     def criar_temporal(self,dados,datas):
-        Id = get_id_temporal()
+        Id = self.get_id_temporal()
         dados_temporais = list(zip(datas,dados))
         print("Criando série temporal id = %i"%Id)
         for e in dados_temporais:
@@ -81,15 +83,15 @@ class EcoHidro(object):
             #dados = anos_hidrologicos.max()
         else: 
             gp = pd.Grouper(freq=self.discretizacao.codigo_pandas+"S")
-            mensais = diarios.groupby(gp).agg(funcoes_reducao[reducao.tipo])
+            mensais = diarios.groupby(gp).agg(funcoes_reducao[self.reducao.tipo])
             datas = list(mensais.index)
             dados = list(mensais["dado"])
 
         Id = self.criar_temporal(dados,datas)
         r = SerieReduzida.objects.create(
                 serie_original = self.original,
-                discretizacao = discretizacao,
-                reducao = reducao,
+                discretizacao = self.discretizacao,
+                reducao = self.reducao,
                 serie_temporal_id = Id
         )
         r.save()
