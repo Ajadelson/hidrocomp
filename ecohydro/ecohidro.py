@@ -32,13 +32,10 @@ class EcoHidro(object):
     
     def get_id_temporal(self):
         if SerieOriginal.objects.count()>0:
-            o = [o.serie_temporal_id for o in SerieOriginal.objects.all()]
-            r = [o.serie_temporal_id for o in SerieReduzida.objects.all()]
-            t = SerieTemporal.objects.latest("Id").Id
-            if r:
-                o.extend(r)
-            o.append(t)
-            return max(o)+1
+            maior_id_original = SerieOriginal.objects.latest('serie_temporal_id').serie_temporal_id
+            maior_id_reduzida = SerieReduzida.objects.latest('serie_temporal_id').serie_temporal_id
+            maior_id_temporal = SerieTemporal.objects.latest('Id').Id
+            return max([maior_id_original,maior_id_reduzida,maior_id_temporal])+1
         else:
             return 1
 
@@ -95,3 +92,4 @@ class EcoHidro(object):
                 serie_temporal_id = Id
         )
         r.save()
+        return SerieTemporal.objects.filter(Id=Id)

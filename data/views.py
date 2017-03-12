@@ -6,12 +6,16 @@ import matplotlib
 matplotlib.use('Agg')
 #from matplotlib import pylab as plt
 #from PIL import Image
+
 #import numpy
 from matplotlib import rcParams
+rcParams.update({'figure.autolayout': True})
 #from numpy import arange
 from .forms import FormCriaSerieDeDados,FormCriaPosto
 
-rcParams.update({'figure.autolayout': True})
+#from matplotlib import pylab as plt
+#from PIL import Image
+
 from .models import SerieOriginal,SerieTemporal,Posto,Variavel,NivelConsistencia,Unidade,Discretizacao,TipoPosto,Localizacao,Fonte
 
 import pandas as pd
@@ -99,8 +103,7 @@ def cria_posto(request):
                 #original = SerieOriginal.objects.create()
                 executa = hid.executar()
                 if executa:
-                    messages.add_message(request, messages.SUCCESS, '%s'%executa)
-                    
+                    messages.add_message(request, messages.SUCCESS, '%s'%executa) 
             messages.add_message(request, messages.SUCCESS, 'Concluído!')
             return render(request,'cria_posto.html',{'aba':'nova'})    
     form =FormCriaPosto

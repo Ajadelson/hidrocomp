@@ -29,29 +29,43 @@ def seleciona_dados_posto(request,posto_id):
     data = datetime.now()
     posto = Posto.objects.get(id=int(posto_id))
     ecohidro = EcoHidro(posto)
-    #originais = SerieOriginal.objects.filter(posto=posto)
-    #variaveis_disponiveis = [o.variavel for o in originais]
-    #variaveis =((variavel.id,variavel.variavel) for variavel in [v for v in Variavel.objects.all() if v in variaveis_disponiveis])
     if request.method == 'GET':
-        #temporais = SerieTemporal.objects.filter(filtra_temporais_por_originais(originais))
+        #Solicitação inicial para visualização do formulário
         return render(request,'seleciona_dados_posto.html',{'aba':'postos','form':FormDadosPosto(variaveis=list(ecohidro.variaveis))})
     if request.method == 'POST':
+        #Se o usuário enviou uma solicitação pelo formulário
         form = FormDadosPosto(data=request.POST,variaveis=list(ecohidro.variaveis))
         if form.is_valid():
+            #Se o formulário for válido
             dados = form.cleaned_data
+            #Salvando solicitação do usuário em um arquivo .log
+            logging.info("$ Selecionado pelo usuario: variável: %i; discretização: %s; reducao: %i"%(
+                int(dados['variavel']),                                                                                        dados['discretizacao'], 
+                int(dados['reducao'])))
+            #obtem a série original
             original = ecohidro.pegar_serie_original(int(dados['variavel']),dados['discretizacao'],int(dados['reducao']))
+            #Verifica se já existem séries reduzidas
             reduzida = ecohidro.obter_series_reduzidas()
             if reduzida:
-                print("ACHOU REDUZIDA")
-                for i in SerieTemporal.objects.filter(Id=reduzida[0].serie_temporal_id):
-                    print(i.data_e_hora,i.dado)
-                print("Tempode execução: " + str(datetime.now()-data))
-                return render(request,'seleciona_dados_posto.html',{'aba':'postos','form':form})
-            ecohidro.prepara_serie_reduzida()
+                #No caso em que a solicitação já exista no banco de dados, não é necessário processar os dados novamente
+                dados = SerieTemporal.objects.filter(Id=reduzida[0].serie_temporal_id)
+            else:
+                #prepara a série reduzida
+                dados = ecohidro.prepara_serie_reduzida()
             print("Tempode execução: " + str(datetime.now()-data))
-            return render(request,'seleciona_dados_posto.html',{'aba':'postos','form':form})
+            return render(request,'seleciona_dados_posto.html',{'aba':'postos','form':form,'dados':dados})
     
 '''
+#IMPORTAR ISSO:
+
+import matplotlib
+matplotlib.use('Agg')
+from matplotlib import pylab as plt
+from PIL import Image
+from matplotlib import rcParams
+rcParams.update({'figure.autolayout': True})
+
+#CRIAR ESTAFUNÇÃO
 def cria_imagens():
     buffer1 = HttpResponse(content_type = "image/png")
     canvas = plt.get_current_fig_manager().canvas

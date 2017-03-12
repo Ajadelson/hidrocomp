@@ -39,8 +39,31 @@
                 </div>
 
             </form>
-{%  endif %}
 
+
+
+{%  endif %}
+{% if dados %}
+<table border="1" class="table table-hover">
+    <tr>
+       <td>Data</td>
+       <td>Dado</td>
+        
+    </tr>
+{% for dado in dados %}
+   
+    <tr>
+      
+       <td>{{dado.data_e_hora}}</td>
+       <td>{{dado.dado}}</td>
+
+  
+        
+    </tr>
+    
+{% endfor %}
+</table>
+{% endif %}
 
 
 {% endblock %}
