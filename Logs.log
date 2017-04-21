@@ -3349,3 +3349,39 @@ Traceback (most recent call last):
   File "C:\Projetos\hidrocomp\data\le_dados.py", line 149, in executar
     return "Não existe a variável do tipo %i neste posto"%str(variavel)
 TypeError: %i format: a number is required, not str
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+ERROR:django.request:Internal Server Error: /postos/novo/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python36\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Projetos\hidrocomp\data\views.py", line 99, in cria_posto
+    nome = hid.obtem_nome_posto(codigo_ana)
+  File "C:\Projetos\hidrocomp\data\le_dados.py", line 137, in obtem_nome_posto
+    return menu['Nome']
+KeyError: 'Nome'

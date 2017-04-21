@@ -133,8 +133,11 @@ class Hidroweb(object):
     def obtem_nome_posto(self,estacao):
         response = requests.get(self.montar_url_estacao(estacao))
         soup = BeautifulSoup(response.content, "lxml")
-        menu = {t.text:t.find_next_sibling("td").text for t in soup.findAll("td",{'class':'gridCampo'})}
-        return menu['Nome']
+        try:
+            menu = {t.text:t.find_next_sibling("td").text for t in soup.findAll("td",{'class':'gridCampo'})}
+            return menu['Nome'],False
+        except:
+            return soup.findAll("p",{'class':'aviso'}),True
         
 
     def executar(self,posto,variavel):

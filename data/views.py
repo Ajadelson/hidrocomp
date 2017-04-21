@@ -96,7 +96,10 @@ def cria_posto(request):
                 return render(request,'cria_posto.html',{'aba':'nova','form':form})  
             else:
                 hid = Hidroweb()
-                nome = hid.obtem_nome_posto(codigo_ana)
+                nome,erro = hid.obtem_nome_posto(codigo_ana)
+                if erro:
+                    messages.add_message(request, messages.SUCCESS, '%s'%nome)
+                    render(request,'cria_posto.html',{'aba':'nova','form':form})
                 posto = Posto.objects.create(tipo_posto=tipo_posto,fonte=fonte,codigo_ana=codigo_ana,nome=nome, localizacao=localizacao)
                 posto.save()
                 
