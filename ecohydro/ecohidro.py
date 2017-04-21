@@ -1,5 +1,5 @@
 import pandas as pd
-from numpy import nan,mean
+from numpy import nan,mean,argmax
 from data.models import Posto,SerieOriginal,Variavel,Reducao,SerieTemporal,Discretizacao,SerieReduzida#,NivelConsistencia,Unidade
 
 
@@ -74,8 +74,9 @@ class EcoHidro(object):
             médias_móveis_por_dia = diarios.rolling(window=int(self.discretizacao.codigo_pandas),center=False).mean()
             anos_hidrologicos = self.dicionario_de_anos_hidrologicos(médias_móveis_por_dia)
             anos = sorted(list(anos_hidrologicos.keys()))
-            dados = [anos_hidrologicos[ano].max() for ano in anos if anos_hidrologicos[ano].max() is not(nan)]
-            datas = [anos_hidrologicos[ano].idxmax() for ano in anos  if anos_hidrologicos[ano].max() is not(nan)]
+            '''MEXER AKI'''
+            dados = [anos_hidrologicos[ano].agg(funcoes_reducao['max']) for ano in anos if anos_hidrologicos[ano].agg(funcoes_reducao['max']) is not(nan)]
+            datas = [anos_hidrologicos[ano].agg(argmax) for ano in anos  if anos_hidrologicos[ano].agg(funcoes_reducao['max']) is not(nan)]
             #datas = list(anos_hidrologicos.idxmax())
             #dados = anos_hidrologicos.max()
         else: 

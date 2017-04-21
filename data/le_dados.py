@@ -1,23 +1,55 @@
 import requests
 import re
 import shutil
+import pandas as pd
+import calendar
+import numpy as np
 from bs4 import BeautifulSoup
 import os
+from datetime import datetime
 from zipfile import ZipFile
 from shutil import move
 import sys
 from tempfile import mkdtemp
+from .models import Variavel,SerieTemporal,SerieOriginal,SerieReduzida,Posto,Discretizacao,Unidade,NivelConsistencia
 
+def get_id_temporal():
+    """Função que retorna ID para ser usado na série Temporal"""
+    if SerieOriginal.objects.count()>0:
+        maior_id_original = SerieOriginal.objects.latest('serie_temporal_id').serie_temporal_id
+        maior_id_reduzida = SerieReduzida.objects.latest('serie_temporal_id').serie_temporal_id
+        maior_id_temporal = SerieTemporal.objects.latest('Id').Id
+        return max([maior_id_original,maior_id_reduzida,maior_id_temporal])+1
+    else:
+        return 1
+    
+def criar_temporal(dados,datas):
+    """Cria a série Temporal série Temporal"""
+    Id = get_id_temporal()
+    dados_temporais = list(zip(datas,dados))
+    print("Criando série temporal id = %i"%Id)
+    for e in dados_temporais:
+        print(e[0],e[1])
+    SerieTemporal.objects.bulk_create([
+                        SerieTemporal(Id = Id,data_e_hora = e[0],dado = e[1]) for e in dados_temporais
+                ])
+    print("criado")
+    return Id
+def cria_serie_original(dados,datas,posto,variavel,nivel_consistencia):
+    """Cria a série Original a partir de um DataFrame"""
+    Id = criar_temporal(dados,datas)
+    print("Criando Série Original para a temporal de ID: "+str(Id))
+    o = SerieOriginal.objects.create(
+            posto = posto,
+            discretizacao = Discretizacao.objects.get(tipo="diário"),
+            variavel = variavel,
+            serie_temporal_id = Id,
+            unidade=Unidade.objects.get(tipo="m³/s"),
+            tipo_dado = NivelConsistencia.objects.get(id=nivel_consistencia)
+    )
+    o.save()
+    return o
 
-class Dado(object):
-    def __init__(self,data,dado,niv_consistencia):
-        self.data=data
-        self.dado=dado
-        self.niv_consistencia=niv_consistencia
-    def __str__(self):
-        return '%i/%i/%i - %.2f - %i'%(self.data.day,self.data.month,self.data.year,self.dado,self.niv_consistencia)
-
-   
 class ONS(object):
     pass
 
@@ -25,9 +57,7 @@ class Hidroweb(object):
 
     url_estacao = 'http://hidroweb.ana.gov.br/Estacao.asp?Codigo={0}&CriaArq=true&TipoArq={1}'
     url_arquivo = 'http://hidroweb.ana.gov.br/{0}'
-
-    def __init__(self, estacao):
-        self.estacao = estacao
+        
 
     def montar_url_estacao(self, estacao, tipo=1):
         return self.url_estacao.format(estacao, tipo)
@@ -37,10 +67,9 @@ class Hidroweb(object):
 
     def montar_nome_arquivo(self, estacao):
         return u'{0}.zip'.format(estacao)
-    def obtem_nome_posto(self):
-        pass
+        
     
-    def  extrai_e_renomeia(self,filename,temp_dir,estacao):
+    def  extrai_e_renomeia(self,filename,temp_dir):
         '''Esta função recebe como argumento um arquivo ".zip" para extrair e renomear'''
         zip_path = os.path.join(temp_dir,filename)
         extraction_dir = os.path.join(os.getcwd(), os.path.splitext(filename)[0])
@@ -51,10 +80,8 @@ class Hidroweb(object):
             # Extract only those members to the temp directory
             zip_file.extractall(temp_dir, members_to_extract)
             # Move the extracted ROOT_PATH directory to its final location
-            cod=estacao
             
-            os.rename(os.path.join(temp_dir,members_to_extract[0]),os.path.join(temp_dir,cod))
-            move(os.path.join(temp_dir,cod), os.path.join(os.getcwd(),"%s.%s"%(cod,members_to_extract[0][0:3])))
+            os.rename(os.path.join(temp_dir,members_to_extract[0]),os.path.join(temp_dir,self.estacao))
 
     def salvar_arquivo_texto(self, estacao, link):
         r = requests.get(self.montar_url_arquivo(link), stream=True)
@@ -65,19 +92,65 @@ class Hidroweb(object):
                 r.raw.decode_content = True
                 shutil.copyfileobj(r.raw, f)
             print ('** %s ** (baixado)' % (estacao, ))
-            self.extrai_e_renomeia(filename,temp_dir,estacao)               
+            self.extrai_e_renomeia(filename,temp_dir)               
             print ('** %s ** (decompactado)' % (estacao, ))
         else:
             print ('** %s ** (problema)' % (estacao, ))
+        return temp_dir
+    
+    def le_dados(self,temp_dir):
+        lista_series_mensais_por_cons={1:[],2:[]}
+        with open(os.path.join(temp_dir,self.estacao),'rt') as file:
+            for linha in file.readlines():
+                if(linha.startswith("\n") or linha.startswith("/")):
+                    continue
+                s=linha.replace(',','.').split(";")
+                if s[3]:
+                    data_linha=datetime.strptime(s[2]+" "+s[3].split()[-1], '%d/%m/%Y %H:%M:%S')
+                else:
+                    data_linha=datetime.strptime(s[2],'%d/%m/%Y')
+                dias_no_mes=calendar.monthrange(data_linha.year,data_linha.month)
+                rng=pd.DatetimeIndex(pd.date_range(data_linha,periods=dias_no_mes[1], freq='D'))
+                cons=[int(s[1]) for i in range (dias_no_mes[1])]
+                serie_linha=pd.Series(s[16:16+dias_no_mes[1]],index=rng)
+                lista_series_mensais_por_cons[int(s[1])].append(serie_linha)
+        serie_completa_por_niv = {}
+        for i in lista_series_mensais_por_cons:
+            if lista_series_mensais_por_cons[i]:
+                serie_completa=pd.concat(lista_series_mensais_por_cons[i])
+                serie_completa=pd.to_numeric(serie_completa, errors='coerce', downcast='float')
+                serie_completa.sort_index(inplace=True)     
+                definicao_de_duplicatas=serie_completa.reset_index(level=1, drop=True).index.duplicated(keep='last')
+                serie_completa_por_niv[i]=serie_completa[~definicao_de_duplicatas]
+        return serie_completa_por_niv
     def obter_link_arquivo(self, response):
         soup = BeautifulSoup(response.content, "lxml")
-        return soup.find('a', href=re.compile('^ARQ/'))['href']
+        try:
+            return soup.find('a', href=re.compile('^ARQ/'))['href'],False
+        except:
+            return 1,True
+            
+    def obtem_nome_posto(self,estacao):
+        response = requests.get(self.montar_url_estacao(estacao))
+        soup = BeautifulSoup(response.content, "lxml")
+        menu = {t.text:t.find_next_sibling("td").text for t in soup.findAll("td",{'class':'gridCampo'})}
+        return menu['Nome']
+        
 
-    def executar(self):
-        self.estacao=est
-        post_data = {'cboTipoReg': '10'}
-        print ('** %s **' % (est, ))
-        r = requests.post(self.montar_url_estacao(est), data=post_data)
-        link = self.obter_link_arquivo(r)
-        self.salvar_arquivo_texto(est, link)
-        print ('** %s ** (concluído)' % (est, ))
+    def executar(self,posto,variavel):
+        #post_datas = [{'cboTipoReg': variavel.codigo_ana} for variavel in Variavel.objects.all()]
+        #for post_data in post_datas:
+        self.estacao = posto.codigo_ana
+        post_data={'cboTipoReg': variavel.codigo_ana}
+        print ('** %s **' % (posto.codigo_ana, ))
+        r = requests.post(self.montar_url_estacao(posto.codigo_ana), data=post_data)
+        link,erro = self.obter_link_arquivo(r)
+        if erro:
+            return "Não existe a variável do tipo '%s' neste posto"%str(variavel)
+        temp_dir = self.salvar_arquivo_texto(posto.codigo_ana, link)
+        series = self.le_dados(temp_dir)
+        for i in series:
+            cria_serie_original(series[i].values,series[i].index,posto,variavel,i)
+        print ('** %s ** (concluído)' % (self.estacao,))
+            
+            

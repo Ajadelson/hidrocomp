@@ -21,3 +21,4 @@ class FormDadosPosto(forms.Form):
     variavel = forms.ChoiceField(label="Tipo de dado:")
     discretizacao = forms.ChoiceField(label="Discretizacao:",choices=discretizacoes)
     reducao = forms.ChoiceField(label="Redução:",choices=reducoes)    
+    tipo_media_movel = forms.ChoiceField(label="Tipo de média móvel:",choices=(('máxima','máxima'),('mínima','mínima')))    

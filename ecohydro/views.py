@@ -31,6 +31,7 @@ def seleciona_dados_posto(request,posto_id):
     ecohidro = EcoHidro(posto)
     if request.method == 'GET':
         #Solicitação inicial para visualização do formulário
+        print(datetime.now())
         return render(request,'seleciona_dados_posto.html',{'aba':'postos','form':FormDadosPosto(variaveis=list(ecohidro.variaveis))})
     if request.method == 'POST':
         #Se o usuário enviou uma solicitação pelo formulário
@@ -49,10 +50,12 @@ def seleciona_dados_posto(request,posto_id):
             if reduzida:
                 #No caso em que a solicitação já exista no banco de dados, não é necessário processar os dados novamente
                 dados = SerieTemporal.objects.filter(Id=reduzida[0].serie_temporal_id)
+                [print(d.data_e_hora) for d in dados]
             else:
                 #prepara a série reduzida
                 dados = ecohidro.prepara_serie_reduzida()
             print("Tempode execução: " + str(datetime.now()-data))
+            [print(d.data_e_hora) for d in dados]
             return render(request,'seleciona_dados_posto.html',{'aba':'postos','form':form,'dados':dados})
     
 '''

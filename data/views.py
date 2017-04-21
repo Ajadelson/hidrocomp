@@ -91,20 +91,21 @@ def cria_posto(request):
             #nome = dados["nome"]
             localizacao = Localizacao.objects.get(id=1)
             postos = Posto.objects.filter(codigo_ana=codigo_ana)
-            hid = Hidroweb(codigo_ana,8,request)
             if postos:
                 messages.add_message(request, messages.ERROR, 'O posto de código %s já existe no sistema.'%postos[0].codigo_ana)
+                return render(request,'cria_posto.html',{'aba':'nova','form':form})  
             else:
-                nome = hid.obtem_nome_posto()
+                hid = Hidroweb()
+                nome = hid.obtem_nome_posto(codigo_ana)
                 posto = Posto.objects.create(tipo_posto=tipo_posto,fonte=fonte,codigo_ana=codigo_ana,nome=nome, localizacao=localizacao)
                 posto.save()
-            for codigo_variavel in range(8,10):
-                hid.codigo_variavel = codigo_variavel
-                #original = SerieOriginal.objects.create()
-                executa = hid.executar()
-                if executa:
-                    messages.add_message(request, messages.SUCCESS, '%s'%executa) 
-            messages.add_message(request, messages.SUCCESS, 'Concluído!')
+                
+                for codigo_variavel in range(8,10):
+                    variavel = Variavel.objects.get(codigo_ana=codigo_variavel)
+                    executa = hid.executar(posto,variavel)
+                    if executa:
+                        messages.add_message(request, messages.SUCCESS, '%s'%executa) 
+                messages.add_message(request, messages.SUCCESS, 'Concluído!')
             return render(request,'cria_posto.html',{'aba':'nova'})    
     form =FormCriaPosto
     return render(request,'cria_posto.html',{'aba':'nova','form':form})
