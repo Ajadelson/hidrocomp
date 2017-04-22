@@ -12,6 +12,18 @@ from .forms import FormSelecionaPosto,FormDadosPosto
 
 logging.basicConfig(filename="Logs.log",level=logging.INFO)
 
+
+
+def visualiza_data_por_discretizacao(data,discretizacao):
+    try:
+        int(discretizacao)
+        return data.year
+    except:
+        if discretizacao=="M":
+            return "%i/%i"%(data.month,data.year)
+        else:
+            return "%i/%i/%i"%(data.day,data.month,data.year)
+
 def seleciona_posto(request):
     postos = ((posto.id,posto.nome) for posto in Posto.objects.all())
     if request.method == 'POST':
@@ -44,19 +56,21 @@ def seleciona_dados_posto(request,posto_id):
                 int(dados['variavel']),                                                                                        dados['discretizacao'], 
                 int(dados['reducao'])))
             #obtem a série original
-            original = ecohidro.pegar_serie_original(int(dados['variavel']),dados['discretizacao'],int(dados['reducao']))
+                
+            original = ecohidro.pegar_serie_original(
+                int(dados['variavel']),dados['discretizacao'],int(dados['reducao']),dados['tipo_media_movel'])
             #Verifica se já existem séries reduzidas
             reduzida = ecohidro.obter_series_reduzidas()
             if reduzida:
                 #No caso em que a solicitação já exista no banco de dados, não é necessário processar os dados novamente
-                dados = SerieTemporal.objects.filter(Id=reduzida[0].serie_temporal_id)
-                [print(d.data_e_hora) for d in dados]
+                resultado = SerieTemporal.objects.filter(Id=reduzida[0].serie_temporal_id)
             else:
                 #prepara a série reduzida
-                dados = ecohidro.prepara_serie_reduzida()
+                resultado = ecohidro.prepara_serie_reduzida()
             print("Tempode execução: " + str(datetime.now()-data))
-            [print(d.data_e_hora) for d in dados]
-            return render(request,'seleciona_dados_posto.html',{'aba':'postos','form':form,'dados':dados})
+            resultado = [(visualiza_data_por_discretizacao(d.data_e_hora,dados['discretizacao']),d.dado,) for d in resultado]
+            print(resultado)
+            return render(request,'seleciona_dados_posto.html',{'aba':'postos','form':form,'dados':resultado})
     
 '''
 #IMPORTAR ISSO:

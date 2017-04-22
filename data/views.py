@@ -22,13 +22,7 @@ import pandas as pd
 from django.contrib import messages
 
 from .le_dados import Hidroweb,ONS
-
-
-            
-            
-    
-
-    
+  
 def series(request):
     series=SerieOriginal.objects.all()
     return render(request,'series.html',{'series':series,'aba':'series'})

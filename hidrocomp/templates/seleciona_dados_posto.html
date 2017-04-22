@@ -1,2 +1,21 @@
 {% extends 'base_forms.html' %}
 {% block titulo %}Selecione as informações referentes ao estudo{% endblock %}
+{% block extra %}
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#id_tipo_media_movel').parent('div').parent('div').parent('div').hide();
+    $('#id_reducao').change(function() {    
+        if ($(this).val()=="9999"){
+            $('#id_tipo_media_movel').parent('div').parent('div').parent('div').show()
+        }    
+        else{
+            if ($(this).val()!="9999"){
+            $('#id_tipo_media_movel').parent('div').parent('div').parent('div').hide()
+        } 
+            
+        }
+    });
+});</script>  
+
+                               
+{% endblock %}
