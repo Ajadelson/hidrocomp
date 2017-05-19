@@ -4486,3 +4486,505 @@ INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: 3; reducao: 99
 WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
 WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
 WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: 3; reducao: 2
+ERROR:django.request:Internal Server Error: /posto/44/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 69, in seleciona_dados_posto
+    resultado = ecohidro.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 92, in prepara_serie_reduzida
+    mensais = diarios.groupby(gp).agg(funcoes_reducao[self.reducao.tipo])
+  File "C:\Python36\lib\site-packages\pandas\core\generic.py", line 3991, in groupby
+    **kwargs)
+  File "C:\Python36\lib\site-packages\pandas\core\groupby.py", line 1511, in groupby
+    return klass(obj, by, **kwds)
+  File "C:\Python36\lib\site-packages\pandas\core\groupby.py", line 370, in __init__
+    mutated=self.mutated)
+  File "C:\Python36\lib\site-packages\pandas\core\groupby.py", line 2392, in _get_grouper
+    binner, grouper, obj = key._get_grouper(obj)
+  File "C:\Python36\lib\site-packages\pandas\tseries\resample.py", line 1062, in _get_grouper
+    r._set_binner()
+  File "C:\Python36\lib\site-packages\pandas\tseries\resample.py", line 237, in _set_binner
+    self.binner, self.grouper = self._get_binner()
+  File "C:\Python36\lib\site-packages\pandas\tseries\resample.py", line 245, in _get_binner
+    binner, bins, binlabels = self._get_binner_for_time()
+  File "C:\Python36\lib\site-packages\pandas\tseries\resample.py", line 660, in _get_binner_for_time
+    return self.groupby._get_time_bins(self.ax)
+  File "C:\Python36\lib\site-packages\pandas\tseries\resample.py", line 1129, in _get_time_bins
+    name=ax.name)
+  File "C:\Python36\lib\site-packages\pandas\util\decorators.py", line 91, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Python36\lib\site-packages\pandas\tseries\index.py", line 301, in __new__
+    ambiguous=ambiguous)
+  File "C:\Python36\lib\site-packages\pandas\tseries\index.py", line 483, in _generate
+    index = _generate_regular_range(start, end, periods, offset)
+  File "C:\Python36\lib\site-packages\pandas\tseries\index.py", line 1965, in _generate_regular_range
+    data = np.arange(b, e, stride, dtype=np.int64)
+MemoryError
+WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: 3; reducao: 9999
+WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 1
+ERROR:django.request:Internal Server Error: /posto/44/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 69, in seleciona_dados_posto
+    resultado = ecohidro.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 78, in prepara_serie_reduzida
+    médias_móveis_por_dia = diarios.rolling(window=int(self.discretizacao.codigo_pandas),center=False).mean()
+ValueError: invalid literal for int() with base 10: 'M'
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 1
+WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 3
+WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /postos/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: M; reducao: 1
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: M; reducao: 2
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: M; reducao: 3
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: M; reducao: 1
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /postos/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /posto/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /accounts/login/
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+ERROR:django.request:Internal Server Error: /postos/novo/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python36\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Projetos\hidrocomp\data\views.py", line 125, in cria_posto
+    nome,erro = hid.obtem_nome_posto(codigo_ana)
+ValueError: too many values to unpack (expected 2)
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+ERROR:django.request:Internal Server Error: /postos/novo/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python36\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Projetos\hidrocomp\data\views.py", line 134, in cria_posto
+    executa = hid.executar(posto,variavel)
+  File "C:\Projetos\hidrocomp\data\le_dados.py", line 88, in executar
+    pd = le_dados('Temp_dir')
+NameError: name 'le_dados' is not defined
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+ERROR:django.request:Internal Server Error: /postos/novo/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python36\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Projetos\hidrocomp\data\views.py", line 134, in cria_posto
+    executa = hid.executar(posto,variavel)
+  File "C:\Projetos\hidrocomp\data\le_dados.py", line 88, in executar
+    pd = self.le_dados('Temp_dir')
+TypeError: le_dados() takes 1 positional argument but 2 were given
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+ERROR:django.request:Internal Server Error: /postos/novo/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python36\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Projetos\hidrocomp\data\views.py", line 135, in cria_posto
+    executa = hid.executar(posto,variavel)
+  File "C:\Projetos\hidrocomp\data\le_dados.py", line 88, in executar
+    pd = self.le_dados('Temp_dir')
+TypeError: le_dados() takes 1 positional argument but 2 were given
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+ERROR:django.request:Internal Server Error: /postos/novo/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python36\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Projetos\hidrocomp\data\views.py", line 135, in cria_posto
+    executa = hid.executar(posto,variavel)
+  File "C:\Projetos\hidrocomp\data\le_dados.py", line 88, in executar
+    pd = self.le_dados('Temp_dir')
+  File "C:\Projetos\hidrocomp\data\le_dados.py", line 73, in le_dados
+    planilha=pd.read_excel("Vazões_Diárias_1931_2015.xls",skiprows=7,header=None)
+UnboundLocalError: local variable 'pd' referenced before assignment
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+ERROR:django.request:Internal Server Error: /postos/novo/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python36\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Projetos\hidrocomp\data\views.py", line 135, in cria_posto
+    executa = hid.executar(posto,variavel)
+  File "C:\Projetos\hidrocomp\data\le_dados.py", line 88, in executar
+    df = self.le_dados('Temp_dir')
+  File "C:\Projetos\hidrocomp\data\le_dados.py", line 73, in le_dados
+    planilha=pd.read_excel("Vazões_Diárias_1931_2015.xls",skiprows=7,header=None)
+  File "C:\Python36\lib\site-packages\pandas\io\excel.py", line 191, in read_excel
+    io = ExcelFile(io, engine=engine)
+  File "C:\Python36\lib\site-packages\pandas\io\excel.py", line 249, in __init__
+    self.book = xlrd.open_workbook(io)
+  File "C:\Python36\lib\site-packages\xlrd\__init__.py", line 395, in open_workbook
+    with open(filename, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'Vazões_Diárias_1931_2015.xls'
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+ERROR:django.request:Internal Server Error: /postos/novo/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python36\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Projetos\hidrocomp\data\views.py", line 135, in cria_posto
+    executa = hid.executar(posto,variavel)
+  File "C:\Projetos\hidrocomp\data\le_dados.py", line 90, in executar
+    df = self.le_dados('Temp_dir')
+  File "C:\Projetos\hidrocomp\data\le_dados.py", line 75, in le_dados
+    planilha=pd.read_excel(os.join(dir_path,"Vazões_Diárias_1931_2015.xls"),skiprows=7,header=None)
+AttributeError: module 'os' has no attribute 'join'
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+ERROR:django.request:Internal Server Error: /postos/novo/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python36\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Projetos\hidrocomp\data\views.py", line 135, in cria_posto
+    executa = hid.executar(posto,variavel)
+  File "C:\Projetos\hidrocomp\data\le_dados.py", line 90, in executar
+    df = self.le_dados('Temp_dir')
+  File "C:\Projetos\hidrocomp\data\le_dados.py", line 75, in le_dados
+    planilha=pd.read_excel(os.path.join(dir_path,"Vazões_Diárias_1931_2015.xls"),skiprows=7,header=None)
+  File "C:\Python36\lib\site-packages\pandas\io\excel.py", line 191, in read_excel
+    io = ExcelFile(io, engine=engine)
+  File "C:\Python36\lib\site-packages\pandas\io\excel.py", line 249, in __init__
+    self.book = xlrd.open_workbook(io)
+  File "C:\Python36\lib\site-packages\xlrd\__init__.py", line 395, in open_workbook
+    with open(filename, "rb") as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Projetos\\hidrocomp\\data\\Vazões_Diárias_1931_2015.xls'
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+ERROR:django.request:Internal Server Error: /postos/novo/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Python36\lib\site-packages\django\contrib\auth\decorators.py", line 23, in _wrapped_view
+    return view_func(request, *args, **kwargs)
+  File "C:\Projetos\hidrocomp\data\views.py", line 135, in cria_posto
+    executa = hid.executar(posto,variavel)
+  File "C:\Projetos\hidrocomp\data\le_dados.py", line 90, in executar
+    df = self.le_dados('Temp_dir')
+  File "C:\Projetos\hidrocomp\data\le_dados.py", line 77, in le_dados
+    data=list(map(mes_em_numero,list(planilha[0])))
+NameError: name 'mes_em_numero' is not defined
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /series/
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /postos/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /postos/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /postos/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /postos/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /postos/novo/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /postos/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/favicon.ico
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: M; reducao: 1
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: M; reducao: 2
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: M; reducao: 9999
+ERROR:django.request:Internal Server Error: /posto/56/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 69, in seleciona_dados_posto
+    resultado = ecohidro.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 78, in prepara_serie_reduzida
+    médias_móveis_por_dia = diarios.rolling(window=int(self.discretizacao.codigo_pandas),center=False).mean()
+ValueError: invalid literal for int() with base 10: 'M'
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: 3; reducao: 9999
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: D; reducao: 9999
+ERROR:django.request:Internal Server Error: /posto/56/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 69, in seleciona_dados_posto
+    resultado = ecohidro.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 78, in prepara_serie_reduzida
+    médias_móveis_por_dia = diarios.rolling(window=int(self.discretizacao.codigo_pandas),center=False).mean()
+ValueError: invalid literal for int() with base 10: 'D'
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: M; reducao: 4
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js

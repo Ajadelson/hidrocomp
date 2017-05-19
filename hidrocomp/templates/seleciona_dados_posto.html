@@ -4,13 +4,18 @@
 <script type="text/javascript">
 $(document).ready(function() {
     $('#id_tipo_media_movel').parent('div').parent('div').parent('div').hide();
+    $('#id_discretizacao_media_movel').parent('div').parent('div').parent('div').hide()
     $('#id_reducao').change(function() {    
         if ($(this).val()=="9999"){
             $('#id_tipo_media_movel').parent('div').parent('div').parent('div').show()
+            $('#id_discretizacao_media_movel').parent('div').parent('div').parent('div').show()
+            $('#id_discretizacao').parent('div').parent('div').parent('div').hide()
         }    
         else{
             if ($(this).val()!="9999"){
             $('#id_tipo_media_movel').parent('div').parent('div').parent('div').hide()
+            $('#id_discretizacao_media_movel').parent('div').parent('div').parent('div').hide()
+            $('#id_discretizacao').parent('div').parent('div').parent('div').show()
         } 
             
         }

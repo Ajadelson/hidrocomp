@@ -16,14 +16,22 @@ class FormDadosPosto(forms.Form):
         super(FormDadosPosto, self).__init__(*args, **kwargs)
         self.fields['variavel'].choices =list(variaveis)
         reducoes = [[reducao.id,reducao.tipo] for reducao in Reducao.objects.all() if not 'média móvel' in reducao.tipo]+[[9999,"média móvel"],]
-        print(reducoes)
+        discretizacoes = ((discretizacao.codigo_pandas,discretizacao.tipo) 
+                          for discretizacao in Discretizacao.objects.all() if not discretizacao.tipo.lower().startswith("média móvel"))
+        discretizacoes_media_movel = ((discretizacao.codigo_pandas,discretizacao.tipo) 
+                          for discretizacao in Discretizacao.objects.all() if discretizacao.tipo.lower().startswith("média móvel"))
+        self.fields['discretizacao_media_movel'].choices =list(discretizacoes_media_movel)
+        self.fields['discretizacao'].choices =list(discretizacoes)
         self.fields['reducao'].choices =list(reducoes)
         
-    discretizacoes = ((discretizacao.codigo_pandas,discretizacao.tipo) for discretizacao in Discretizacao.objects.all())
+    
     
 
     variavel = forms.ChoiceField(label="Tipo de dado:")
-    discretizacao = forms.ChoiceField(label="Discretizacao:",choices=discretizacoes)
-    reducao = forms.ChoiceField(label="Redução:")    
+    reducao = forms.ChoiceField(label="Redução:")
+    discretizacao_media_movel = forms.ChoiceField(label="Discretizacao:",required=False,
+                                         widget=forms.Select(attrs={'class':'média móvel'}))
+    discretizacao = forms.ChoiceField(label="Discretizacao:",required=False,
+                                         widget=forms.Select(attrs={'class':'média móvel'}))
     tipo_media_movel = forms.ChoiceField(label="Tipo de média móvel:",choices=(('',''),('máxima','máxima'),('mínima','mínima')),required=False,
-                                         widget=forms.Select(attrs={'class':'ok'}))   
+                                         widget=forms.Select(attrs={'class':'média móvel'}))   

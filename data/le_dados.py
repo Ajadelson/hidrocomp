@@ -1,3 +1,5 @@
+import os
+from abc import ABCMeta, abstractmethod
 import requests
 import re
 import shutil
@@ -12,6 +14,13 @@ from shutil import move
 import sys
 from tempfile import mkdtemp
 from .models import Variavel,SerieTemporal,SerieOriginal,SerieReduzida,Posto,Discretizacao,Unidade,NivelConsistencia
+
+def mes_em_numero(string):
+    """CRIA O DATAFRAME DATAS - VAZÕES"""
+    mes_num = {"jan":"1","fev":"2","mar":"3","abr":"4","mai":"5","jun":"6","jul":"7","ago":"8","set":"9","out":"10","nov":"11","dez":"12"}
+    for mes,num in mes_num.items():
+        string=string.replace(mes,num)
+    return string
 
 def get_id_temporal():
     """Função que retorna ID para ser usado na série Temporal"""
@@ -28,13 +37,12 @@ def criar_temporal(dados,datas):
     Id = get_id_temporal()
     dados_temporais = list(zip(datas,dados))
     print("Criando série temporal id = %i"%Id)
-    for e in dados_temporais:
-        print(e[0],e[1])
     SerieTemporal.objects.bulk_create([
                         SerieTemporal(Id = Id,data_e_hora = e[0],dado = e[1]) for e in dados_temporais
                 ])
     print("criado")
     return Id
+
 def cria_serie_original(dados,datas,posto,variavel,nivel_consistencia):
     """Cria a série Original a partir de um DataFrame"""
     Id = criar_temporal(dados,datas)
@@ -50,10 +58,47 @@ def cria_serie_original(dados,datas,posto,variavel,nivel_consistencia):
     o.save()
     return o
 
-class ONS(object):
-    pass
 
-class Hidroweb(object):
+class Base(metaclass=ABCMeta):
+    @abstractmethod
+    def le_dados(self,temp_dir):
+        pass
+    
+    @abstractmethod
+    def obtem_nome_posto(self,estacao):
+        pass
+    
+    @abstractmethod
+    def executar(self,posto,variavel):
+        pass
+    
+    
+
+class ONS(Base):
+    def le_dados(self,temp_dir):
+        dir_path = os.path.dirname(os.path.realpath(__file__))
+        planilha=pd.read_excel(os.path.join(dir_path,"Vazões_Diárias_1931_2015.xls"),skiprows=7,header=None)
+        #CRIANDO A COLUNA DE DATAS
+        data=list(map(mes_em_numero,list(planilha[0])))
+        #setlocale(LC_TIME,'portuguese_brazil')
+        #TRANSFORMANDO EM UM INDEX DE DATAS
+        data=pd.DatetimeIndex(pd.to_datetime(pd.Series(data), format="%d/%m/%Y"))
+        #CRIA A COLUNA DE VAZÃO
+        vazao=planilha[150]
+        #CRIANDO DATAFRAME - DATAS COMO INDICE DAS VAZÕES
+        df = pd.DataFrame({"Vazão":list(vazao)},index = data)
+        return df
+    def obtem_nome_posto(self,estacao):
+        return "Xingó",False
+    def executar(self,posto,variavel):
+        if variavel.variavel != "Vazão":
+            return "Não existe a variável do tipo '%s' neste posto"%str(variavel)
+        print ('** %s **' % (posto.codigo_ana, )) 
+        df = self.le_dados('Temp_dir')
+        cria_serie_original(df.values,df.index,posto,variavel,1)
+        print ('** %s ** (concluído)' % (posto.codigo_ana,))
+
+class ANA(Base):
 
     url_estacao = 'http://hidroweb.ana.gov.br/Estacao.asp?Codigo={0}&CriaArq=true&TipoArq={1}'
     url_arquivo = 'http://hidroweb.ana.gov.br/{0}'
@@ -140,7 +185,7 @@ class Hidroweb(object):
             return soup.findAll("p",{'class':'aviso'}),True
         
 
-    def executar(self,posto,variavel):
+    def executar(self,posto,variavel=None):
         #post_datas = [{'cboTipoReg': variavel.codigo_ana} for variavel in Variavel.objects.all()]
         #for post_data in post_datas:
         self.estacao = posto.codigo_ana

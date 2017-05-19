@@ -21,7 +21,7 @@ from .models import SerieOriginal,SerieTemporal,Posto,Variavel,NivelConsistencia
 import pandas as pd
 from django.contrib import messages
 
-from .le_dados import Hidroweb,ONS
+from .le_dados import ANA,ONS
   
 def series(request):
     series=SerieOriginal.objects.all()
@@ -69,7 +69,7 @@ def atualiza_pelo_hidroweb(request):
             return render(request,'carrega_serie_de_dados.html',{'aba':'nova'})
     form =FormCriaSerieDeDados
     return render(request,'carrega_serie_de_dados.html',{'aba':'nova','form':form})
-
+'''
 @login_required
 def cria_posto(request):
     if request.method == 'POST':
@@ -89,7 +89,7 @@ def cria_posto(request):
                 messages.add_message(request, messages.ERROR, 'O posto de código %s já existe no sistema.'%postos[0].codigo_ana)
                 return render(request,'cria_posto.html',{'aba':'nova','form':form})  
             else:
-                hid = Hidroweb()
+                hid = ANA()
                 nome,erro = hid.obtem_nome_posto(codigo_ana)
                 if erro:
                     messages.add_message(request, messages.SUCCESS, '%s'%nome)
@@ -106,7 +106,39 @@ def cria_posto(request):
             return render(request,'cria_posto.html',{'aba':'nova'})    
     form =FormCriaPosto
     return render(request,'cria_posto.html',{'aba':'nova','form':form})
+'''
+@login_required
+def cria_posto(request):
+    if request.method == 'POST':
+        form = FormCriaPosto(request.POST)
+        if form.is_valid():
+            dados = form.cleaned_data
+            tipo_posto = TipoPosto.objects.get(id=dados["tipo_posto"])
+            fonte = Fonte.objects.get(id=dados["fonte"])
+            codigo_ana = dados["codigo_ana"]
+            localizacao = Localizacao.objects.get(id=1)
+            postos = Posto.objects.filter(codigo_ana=codigo_ana)
+            if postos:
+                messages.add_message(request, messages.ERROR, 'O posto de código %s já existe no sistema.'%postos[0].codigo_ana)
+                return render(request,'cria_posto.html',{'aba':'nova','form':form})  
+            hid = eval(fonte.tipo)()
+            print(fonte.tipo)
+            nome,erro = hid.obtem_nome_posto(codigo_ana)
+            if erro:
+                messages.add_message(request, messages.ERROR, '%s'%nome)
+                return render(request,'cria_posto.html',{'aba':'nova','form':form})
+            posto = Posto.objects.create(tipo_posto=tipo_posto,fonte=fonte,codigo_ana=codigo_ana,nome=nome, localizacao=localizacao)
+            posto.save()
 
+            for codigo_variavel in range(8,10):
+                variavel = Variavel.objects.get(codigo_ana=codigo_variavel)
+                executa = hid.executar(posto,variavel)
+                if executa:
+                    messages.add_message(request, messages.ERROR, '%s'%executa) 
+            messages.add_message(request, messages.SUCCESS, 'Concluído!')
+            return render(request,'cria_posto.html',{'aba':'nova'})    
+    form =FormCriaPosto
+    return render(request,'cria_posto.html',{'aba':'nova','form':form})
 
 
 
