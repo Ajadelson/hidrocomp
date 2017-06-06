@@ -44,6 +44,12 @@
 
 
 {%  endif %}
+
+{% if grafico %}
+<div style="width:600;height:500">
+{{ grafico|safe }}
+</div>
+{% endif %}
 {% if dados %}
 <table border="1" class="table table-hover">
     <tr>

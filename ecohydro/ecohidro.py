@@ -6,19 +6,23 @@ from data.models import Posto,SerieOriginal,Variavel,Reducao,SerieTemporal,Discr
 funcoes_reducao = {'máxima':max,'mínima':min,'soma':sum, 'média':mean,'máxima média móvel':argmax,'mínima média móvel':argmin}
 meses = {1:"JAN",2:"FEB",3:"MAR",4:"APR",5:"MAY",6:"JUN",7:"JUL",8:"AUG",9:"SEP",10:"OCT",11:"NOV",12:"DEC"}
 
+
+
 class EcoHidro(object):
     def __init__(self,posto):
         self.posto = posto
         variaveis_disponiveis = [o.variavel for o in SerieOriginal.objects.filter(posto=posto)]
         self.variaveis =((variavel.id,variavel.variavel) for variavel in [v for v in Variavel.objects.all() if v in variaveis_disponiveis])
     
-    def pegar_serie_original(self,variavel_id,codigo_discretizacao,reducao_id,tipo_media_movel):
+    def pegar_serie_original(self,variavel_id,codigo_discretizacao,reducao_id,tipo_media_movel,codigo_discretizacao_media_movel):
         self.variavel=Variavel.objects.get(id=variavel_id)
         originais = SerieOriginal.objects.filter(posto=self.posto,variavel=self.variavel)
         self.discretizacao = Discretizacao.objects.get(codigo_pandas=codigo_discretizacao)
         print(tipo_media_movel)
         if tipo_media_movel:
             self.reducao = Reducao.objects.get(tipo=tipo_media_movel+" média móvel")
+            self.discretizacao_media_movel=codigo_discretizacao_media_movel
+            
         else:
             self.reducao = Reducao.objects.get(id=reducao_id)
         id_tipo_dado = 2 if 2 in [o.tipo_dado.id for o in originais] else 1
@@ -55,7 +59,7 @@ class EcoHidro(object):
         for e in dados_temporais:
             print(e[0],e[1])
         SerieTemporal.objects.bulk_create([
-                            SerieTemporal(Id = Id,data_e_hora = e[0],dado = e[1]) for e in dados_temporais
+                            SerieTemporal(Id = Id,data_e_hora = e[0],dado = e[1]) for e in dados_temporais if not e[0] is nan 
                     ])
         print("criado")
         return Id
@@ -75,20 +79,21 @@ class EcoHidro(object):
         temporais = SerieTemporal.objects.filter(Id=self.original.serie_temporal_id)
         diarios = self.cria_dados_diarios_pandas(temporais)
         if "média móvel" in self.reducao.tipo:
-            médias_móveis_por_dia = diarios.rolling(window=int(self.discretizacao.codigo_pandas),center=False).mean()
+            print(self.discretizacao)
+            médias_móveis_por_dia = diarios.rolling(window=int(self.discretizacao_media_movel),center=False).mean()
             anos_hidrologicos = self.dicionario_de_anos_hidrologicos(médias_móveis_por_dia)
             gp = pd.Grouper(freq="10AS")
             anos = sorted(list(anos_hidrologicos.keys()))
             dados = [anos_hidrologicos[ano].groupby(gp).agg(funcoes_reducao[self.reducao.tipo.split()[0]]).max()
-                     for ano in anos if anos_hidrologicos[ano].groupby(gp).agg(funcoes_reducao[self.reducao.tipo.split()[0]]) is not(nan)]
+                     for ano in anos if not anos_hidrologicos[ano].groupby(gp).agg(funcoes_reducao[self.reducao.tipo.split()[0]]) is (nan)]
             datas = [anos_hidrologicos[ano].groupby(gp).agg(funcoes_reducao[self.reducao.tipo]).max()
-                     for ano in anos  if anos_hidrologicos[ano].groupby(gp).agg(funcoes_reducao[self.reducao.tipo.split()[0]]) is not(nan)]
+                     for ano in anos  if not anos_hidrologicos[ano].groupby(gp).agg(funcoes_reducao[self.reducao.tipo.split()[0]]) is (nan)]
             print(dados)
             print(datas)
             #datas = list(anos_hidrologicos.idxmax())
             #dados = anos_hidrologicos.max()
         else: 
-            gp = pd.Grouper(freq=self.discretizacao.codigo_pandas+"S")
+            gp = pd.Grouper(freq=self.discretizacao.codigo_pandas)
             mensais = diarios.groupby(gp).agg(funcoes_reducao[self.reducao.tipo])
             datas = list(mensais.index)
             dados = list(mensais["dado"])

@@ -8,6 +8,10 @@ from django.shortcuts import render
 from data.models import Posto,SerieOriginal,Variavel,Reducao,SerieTemporal,Discretizacao,SerieReduzida#,NivelConsistencia,Unidade
 from .ecohidro import EcoHidro
 from .forms import FormSelecionaPosto,FormDadosPosto
+from plotly.offline import plot
+from plotly.graph_objs import Scatter, Figure, Layout
+
+
 
 
 logging.basicConfig(filename="Logs.log",level=logging.INFO)
@@ -58,7 +62,7 @@ def seleciona_dados_posto(request,posto_id):
             #obtem a série original
                 
             original = ecohidro.pegar_serie_original(
-                int(dados['variavel']),dados['discretizacao'],int(dados['reducao']),dados['tipo_media_movel'])
+                int(dados['variavel']),dados['discretizacao'],int(dados['reducao']),dados['tipo_media_movel'],int(dados['discretizacao_media_movel']))
             #Verifica se já existem séries reduzidas
             reduzida = ecohidro.obter_series_reduzidas()
             if reduzida:
@@ -68,9 +72,14 @@ def seleciona_dados_posto(request,posto_id):
                 #prepara a série reduzida
                 resultado = ecohidro.prepara_serie_reduzida()
             print("Tempode execução: " + str(datetime.now()-data))
+            a = plot({
+                'data':[Scatter(x=[d.data_e_hora for d in resultado], y=[d.dado for d in resultado]),],
+                'layout':Layout(title="Gráfico",xaxis={'title':'tempo'},yaxis={'title':'vazão'})
+            
+            },auto_open=False, output_type='div')
             resultado = [(visualiza_data_por_discretizacao(d.data_e_hora,dados['discretizacao']),d.dado,) for d in resultado]
             print(resultado)
-            return render(request,'seleciona_dados_posto.html',{'aba':'postos','form':form,'dados':resultado})
+            return render(request,'seleciona_dados_posto.html',{'aba':'postos','form':form,'dados':resultado,'grafico':a})
     
 '''
 #IMPORTAR ISSO:

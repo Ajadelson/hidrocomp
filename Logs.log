@@ -4988,3 +4988,798 @@ INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: M; reducao: 4
 WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
 WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
 WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /posto/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/favicon.ico
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 9999
+ERROR:django.request:Internal Server Error: /posto/44/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 69, in seleciona_dados_posto
+    resultado = ecohidro.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 78, in prepara_serie_reduzida
+    médias_móveis_por_dia = diarios.rolling(window=int(self.discretizacao.codigo_pandas),center=False).mean()
+ValueError: invalid literal for int() with base 10: 'M'
+WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 9999
+ERROR:django.request:Internal Server Error: /posto/44/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 69, in seleciona_dados_posto
+    resultado = ecohidro.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 78, in prepara_serie_reduzida
+    médias_móveis_por_dia = diarios.rolling(window=int(self.discretizacao.codigo_pandas),center=False).mean()
+ValueError: invalid literal for int() with base 10: 'M'
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /posto/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/favicon.ico
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 1
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 9999
+ERROR:django.request:Internal Server Error: /posto/10/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 69, in seleciona_dados_posto
+    resultado = ecohidro.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 78, in prepara_serie_reduzida
+    médias_móveis_por_dia = diarios.rolling(window=int(self.discretizacao.codigo_pandas),center=False).mean()
+ValueError: invalid literal for int() with base 10: 'M'
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 9999
+ERROR:django.request:Internal Server Error: /posto/10/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 69, in seleciona_dados_posto
+    resultado = ecohidro.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 78, in prepara_serie_reduzida
+    médias_móveis_por_dia = diarios.rolling(window=int(self.discretizacao.codigo_pandas),center=False).mean()
+ValueError: invalid literal for int() with base 10: 'M'
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 1
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 9999
+ERROR:django.request:Internal Server Error: /posto/10/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 69, in seleciona_dados_posto
+    resultado = ecohidro.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 83, in prepara_serie_reduzida
+    anos_hidrologicos = self.dicionario_de_anos_hidrologicos(médias_móveis_por_dia)
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 68, in dicionario_de_anos_hidrologicos
+    nmes = self.sugere_mes_inicio_ano_hidrologico(df)
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 53, in sugere_mes_inicio_ano_hidrologico
+    return pd.value_counts([d.month for d in minimas_dos_anos["dado"]]).idxmax()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 53, in <listcomp>
+    return pd.value_counts([d.month for d in minimas_dos_anos["dado"]]).idxmax()
+AttributeError: 'numpy.float64' object has no attribute 'month'
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 9999
+ERROR:django.request:Internal Server Error: /posto/10/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 69, in seleciona_dados_posto
+    resultado = ecohidro.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 83, in prepara_serie_reduzida
+    anos_hidrologicos = self.dicionario_de_anos_hidrologicos(médias_móveis_por_dia)
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 68, in dicionario_de_anos_hidrologicos
+    nmes = self.sugere_mes_inicio_ano_hidrologico(df)
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 53, in sugere_mes_inicio_ano_hidrologico
+    return pd.value_counts([d.month for d in minimas_dos_anos["dado"]]).idxmax()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 53, in <listcomp>
+    return pd.value_counts([d.month for d in minimas_dos_anos["dado"]]).idxmax()
+AttributeError: 'numpy.float64' object has no attribute 'month'
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 9999
+ERROR:django.request:Internal Server Error: /posto/10/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 69, in seleciona_dados_posto
+    resultado = ecohidro.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 84, in prepara_serie_reduzida
+    anos_hidrologicos = self.dicionario_de_anos_hidrologicos(médias_móveis_por_dia)
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 68, in dicionario_de_anos_hidrologicos
+    nmes = self.sugere_mes_inicio_ano_hidrologico(df)
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 53, in sugere_mes_inicio_ano_hidrologico
+    return pd.value_counts([d.month for d in minimas_dos_anos["dado"]]).idxmax()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 53, in <listcomp>
+    return pd.value_counts([d.month for d in minimas_dos_anos["dado"]]).idxmax()
+AttributeError: 'numpy.float64' object has no attribute 'month'
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 9999
+ERROR:django.request:Internal Server Error: /posto/10/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 61, in seleciona_dados_posto
+    int(dados['variavel']),dados['discretizacao'],int(dados['reducao']),dados['tipo_media_movel']),int(dados['discretizacao_media_movel'])
+TypeError: pegar_serie_original() missing 1 required positional argument: 'codigo_discretizacao_media_movel'
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 9999
+ERROR:django.request:Internal Server Error: /posto/10/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 39, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 69, in seleciona_dados_posto
+    resultado = ecohidro.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 106, in prepara_serie_reduzida
+    serie_temporal_id = Id
+  File "C:\Python36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 397, in create
+    obj = self.model(**kwargs)
+  File "C:\Python36\lib\site-packages\django\db\models\base.py", line 537, in __init__
+    setattr(self, field.name, rel_obj)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\related_descriptors.py", line 211, in __set__
+    self.field.remote_field.model._meta.object_name,
+ValueError: Cannot assign "3": "SerieReduzida.discretizacao" must be a "Discretizacao" instance.
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 9999
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 9999
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /posto/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/favicon.ico
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 9999
+WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 2
+WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 9999
+WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 9999
+WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 9999
+WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 9999
+WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 9999
+WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 9999
+WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: D; reducao: 9999
+WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /posto/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/favicon.ico
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 1
+WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /postos/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 1
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 1
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 1
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: D; reducao: 1
+ERROR:django.request:Internal Server Error: /posto/10/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\tseries\frequencies.py", line 624, in get_offset
+    klass = prefix_mapping[split[0]]
+KeyError: 'DS'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\tseries\frequencies.py", line 550, in to_offset
+    offset = get_offset(name)
+  File "C:\Python36\lib\site-packages\pandas\tseries\frequencies.py", line 630, in get_offset
+    raise ValueError(_INVALID_FREQ_ERROR.format(name))
+ValueError: Invalid frequency: DS
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 73, in seleciona_dados_posto
+    resultado = ecohidro.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 96, in prepara_serie_reduzida
+    gp = pd.Grouper(freq=self.discretizacao.codigo_pandas+"S")
+  File "C:\Python36\lib\site-packages\pandas\core\resample.py", line 1008, in __init__
+    freq = to_offset(freq)
+  File "C:\Python36\lib\site-packages\pandas\util\_decorators.py", line 91, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Python36\lib\site-packages\pandas\tseries\frequencies.py", line 557, in to_offset
+    raise ValueError(_INVALID_FREQ_ERROR.format(freq))
+ValueError: Invalid frequency: DS
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: D; reducao: 2
+ERROR:django.request:Internal Server Error: /posto/10/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\tseries\frequencies.py", line 624, in get_offset
+    klass = prefix_mapping[split[0]]
+KeyError: 'DS'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\tseries\frequencies.py", line 550, in to_offset
+    offset = get_offset(name)
+  File "C:\Python36\lib\site-packages\pandas\tseries\frequencies.py", line 630, in get_offset
+    raise ValueError(_INVALID_FREQ_ERROR.format(name))
+ValueError: Invalid frequency: DS
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 73, in seleciona_dados_posto
+    resultado = ecohidro.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 96, in prepara_serie_reduzida
+    gp = pd.Grouper(freq=self.discretizacao.codigo_pandas+"S")
+  File "C:\Python36\lib\site-packages\pandas\core\resample.py", line 1008, in __init__
+    freq = to_offset(freq)
+  File "C:\Python36\lib\site-packages\pandas\util\_decorators.py", line 91, in wrapper
+    return func(*args, **kwargs)
+  File "C:\Python36\lib\site-packages\pandas\tseries\frequencies.py", line 557, in to_offset
+    raise ValueError(_INVALID_FREQ_ERROR.format(freq))
+ValueError: Invalid frequency: DS
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 2
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 9999
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 1
+ERROR:django.request:Internal Server Error: /posto/10/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 75, in seleciona_dados_posto
+    a = plot([Scatter(x=[d.data_e_hora for d in resultado], y=[d.dado for d in resultado])],auto_open=False, output_type='div',title="Teste")
+TypeError: plot() got an unexpected keyword argument 'title'
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 1
+ERROR:django.request:Internal Server Error: /posto/10/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\plotly\tools.py", line 1385, in return_figure_from_figure_or_data
+    graph_objs.Figure(figure)
+  File "C:\Python36\lib\site-packages\plotly\graph_objs\graph_objs.py", line 1150, in __init__
+    super(Figure, self).__init__(*args, **kwargs)
+  File "C:\Python36\lib\site-packages\plotly\graph_objs\graph_objs.py", line 377, in __init__
+    self.__setitem__(key, val, _raise=_raise)
+  File "C:\Python36\lib\site-packages\plotly\graph_objs\graph_objs.py", line 432, in __setitem__
+    value = self._value_to_graph_object(key, value, _raise=_raise)
+  File "C:\Python36\lib\site-packages\plotly\graph_objs\graph_objs.py", line 537, in _value_to_graph_object
+    raise exceptions.PlotlyDictValueError(self, path)
+plotly.exceptions.PlotlyDictValueError: 'data' has invalid value inside 'figure'
+
+Path To Error: ['data']
+
+Current path: []
+Current parent object_names: []
+
+Additionally:
+
+    role: object
+
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 79, in seleciona_dados_posto
+    },auto_open=False, output_type='div')
+  File "C:\Python36\lib\site-packages\plotly\offline\offline.py", line 469, in plot
+    '100%', '100%', global_requirejs=False)
+  File "C:\Python36\lib\site-packages\plotly\offline\offline.py", line 161, in _plot_html
+    figure_or_data, validate
+  File "C:\Python36\lib\site-packages\plotly\tools.py", line 1395, in return_figure_from_figure_or_data
+    "".format(err))
+plotly.exceptions.PlotlyError: Invalid 'figure_or_data' argument. Plotly will not be able to properly parse the resulting JSON. If you want to send this 'figure_or_data' to Plotly anyway (not recommended), you can set 'validate=False' as a plot option.
+Here's why you're seeing this error:
+
+'data' has invalid value inside 'figure'
+
+Path To Error: ['data']
+
+Current path: []
+Current parent object_names: []
+
+Additionally:
+
+    role: object
+
+
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 1
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 1
+ERROR:django.request:Internal Server Error: /posto/10/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 77, in seleciona_dados_posto
+    'layout':Layout(title="hello world",xlabel="Teste")
+  File "C:\Python36\lib\site-packages\plotly\graph_objs\graph_objs.py", line 377, in __init__
+    self.__setitem__(key, val, _raise=_raise)
+  File "C:\Python36\lib\site-packages\plotly\graph_objs\graph_objs.py", line 428, in __setitem__
+    raise exceptions.PlotlyDictKeyError(self, path)
+plotly.exceptions.PlotlyDictKeyError: 'xlabel' is not allowed in 'layout'
+
+Path To Error: ['xlabel']
+
+Valid attributes for 'layout' at path [] under parents []:
+
+    ['angularaxis', 'annotations', 'autosize', 'bargap', 'bargroupgap',
+    'barmode', 'barnorm', 'boxgap', 'boxgroupgap', 'boxmode', 'calendar',
+    'direction', 'dragmode', 'font', 'geo', 'height', 'hiddenlabels',
+    'hiddenlabelssrc', 'hidesources', 'hovermode', 'images', 'legend',
+    'mapbox', 'margin', 'orientation', 'paper_bgcolor', 'plot_bgcolor',
+    'radialaxis', 'scene', 'separators', 'shapes', 'showlegend', 'sliders',
+    'smith', 'ternary', 'title', 'titlefont', 'updatemenus', 'width',
+    'xaxis', 'yaxis']
+
+Run `<layout-object>.help('attribute')` on any of the above.
+'<layout-object>' is the object at []
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 1
+ERROR:django.request:Internal Server Error: /posto/10/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 77, in seleciona_dados_posto
+    'layout':Layout(title="hello world",xaxis="Teste")
+  File "C:\Python36\lib\site-packages\plotly\graph_objs\graph_objs.py", line 377, in __init__
+    self.__setitem__(key, val, _raise=_raise)
+  File "C:\Python36\lib\site-packages\plotly\graph_objs\graph_objs.py", line 432, in __setitem__
+    value = self._value_to_graph_object(key, value, _raise=_raise)
+  File "C:\Python36\lib\site-packages\plotly\graph_objs\graph_objs.py", line 537, in _value_to_graph_object
+    raise exceptions.PlotlyDictValueError(self, path)
+plotly.exceptions.PlotlyDictValueError: 'xaxis' has invalid value inside 'layout'
+
+Path To Error: ['xaxis']
+
+Current path: []
+Current parent object_names: []
+
+With the current parents, 'xaxis' can be used as follows:
+
+Under ('figure', 'layout'):
+
+    role: object
+
+
+
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 1
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 1
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 1
+ERROR:django.request:Internal Server Error: /posto/10/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 77, in seleciona_dados_posto
+    'layout':Layout(title="hello world",xaxis={title:'tempo'},yaxis={title:'vazão'})
+NameError: name 'title' is not defined
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: M; reducao: 1
+WARNING:django.request:Not Found: /posto/10/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: M; reducao: 1
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: M; reducao: 2
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: M; reducao: 3
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: D; reducao: 1
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /series/
+WARNING:django.request:Not Found: /postos/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: D; reducao: 9999
+ERROR:django.request:Internal Server Error: /posto/11/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 73, in seleciona_dados_posto
+    resultado = ecohidro.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 101, in prepara_serie_reduzida
+    Id = self.criar_temporal(dados,datas)
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 62, in criar_temporal
+    SerieTemporal(Id = Id,data_e_hora = e[0],dado = e[1]) for e in dados_temporais
+  File "C:\Python36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 443, in bulk_create
+    ids = self._batched_insert(objs_without_pk, fields, batch_size)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 1080, in _batched_insert
+    inserted_id = self._insert(item, fields=fields, using=self.db, return_id=True)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 1063, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1098, in execute_sql
+    for sql, params in self.as_sql():
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1051, in as_sql
+    for obj in self.query.objs
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1051, in <listcomp>
+    for obj in self.query.objs
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1050, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 990, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 770, in get_db_prep_save
+    prepared=False)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 1459, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 1438, in get_prep_value
+    value = super(DateTimeField, self).get_prep_value(value)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 1296, in get_prep_value
+    return self.to_python(value)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 1399, in to_python
+    parsed = parse_datetime(value)
+  File "C:\Python36\lib\site-packages\django\utils\dateparse.py", line 94, in parse_datetime
+    match = datetime_re.match(value)
+TypeError: expected string or bytes-like object
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: D; reducao: 9999
+ERROR:django.request:Internal Server Error: /posto/11/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 73, in seleciona_dados_posto
+    resultado = ecohidro.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 101, in prepara_serie_reduzida
+    Id = self.criar_temporal(dados,datas)
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 62, in criar_temporal
+    SerieTemporal(Id = Id,data_e_hora = e[0],dado = e[1]) for e in dados_temporais
+  File "C:\Python36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 443, in bulk_create
+    ids = self._batched_insert(objs_without_pk, fields, batch_size)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 1080, in _batched_insert
+    inserted_id = self._insert(item, fields=fields, using=self.db, return_id=True)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 1063, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1098, in execute_sql
+    for sql, params in self.as_sql():
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1051, in as_sql
+    for obj in self.query.objs
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1051, in <listcomp>
+    for obj in self.query.objs
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1050, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 990, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 770, in get_db_prep_save
+    prepared=False)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 1459, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 1438, in get_prep_value
+    value = super(DateTimeField, self).get_prep_value(value)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 1296, in get_prep_value
+    return self.to_python(value)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 1399, in to_python
+    parsed = parse_datetime(value)
+  File "C:\Python36\lib\site-packages\django\utils\dateparse.py", line 94, in parse_datetime
+    match = datetime_re.match(value)
+TypeError: expected string or bytes-like object
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: D; reducao: 9999
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: MS; reducao: 1
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
