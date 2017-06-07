@@ -108,7 +108,7 @@ class SerieOriginal(models.Model):
     unidade = models.ForeignKey(Unidade)
     serie_temporal_id = models.IntegerField()
     def __str__(self):
-        return 'Série %s do posto de %s, com dados de %s (%s)'%(self.discretizacao.tipo,self.posto,self.variavel,self.unidade)
+        return 'Série Original %s do posto de %s, com dados de %s (%s)'%(self.discretizacao.tipo,self.posto,self.variavel,self.unidade)
     
     class Meta:
         verbose_name_plural = "Séries Originais"
@@ -125,5 +125,8 @@ class SerieReduzida(models.Model):
     class Meta:
         verbose_name_plural = "Séries Reduzidas"
         verbose_name = "Série Reduzida"
+    def __str__(self):
+        return 'Série de %s %s do posto de %s'%(self.reducao.tipo,self.discretizacao.tipo,
+                                                                      self.serie_original.posto)
 
 

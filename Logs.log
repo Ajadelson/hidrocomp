@@ -5783,3 +5783,1210 @@ WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
 WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
 WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
 WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /favicon.ico
+WARNING:django.request:Not Found: /posto/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+ERROR:django.request:Internal Server Error: /posto/44/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 47, in seleciona_dados_posto
+    if "média móvel" in self.reducao.tipo:
+NameError: name 'self' is not defined
+ERROR:django.request:Internal Server Error: /posto/44/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 47, in seleciona_dados_posto
+    if dados['reducao']==9999:
+UnboundLocalError: local variable 'dados' referenced before assignment
+WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/favicon.ico
+WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: D; reducao: 1
+ERROR:django.request:Internal Server Error: /posto/44/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 69, in seleciona_dados_posto
+    int(dados['variavel']),dados['discretizacao'],int(dados['reducao']),dados['tipo_media_movel'],int(dados['discretizacao_media_movel']))
+TypeError: pegar_serie_original() takes 4 positional arguments but 6 were given
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: D; reducao: 1
+WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: MS; reducao: 1
+WARNING:django.request:Not Found: /posto/44/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /postos/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: MS; reducao: 1
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: MS; reducao: 2
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: MS; reducao: 1
+ERROR:django.request:Internal Server Error: /posto/56/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 83, in seleciona_dados_posto
+    'layout':Layout(title=str(ecohidro.serie_reduzida),xaxis={'title':'tempo'},yaxis={'title':'vazão'})
+AttributeError: 'EstatisticaBasica' object has no attribute 'serie_reduzida'
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: MS; reducao: 1
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: MS; reducao: 1
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: D; reducao: 1
+ERROR:django.request:Internal Server Error: /posto/56/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 84, in seleciona_dados_posto
+    'layout':Layout(title=ecohidro.serie_reduzida.__str__(self),xaxis={'title':'tempo'},yaxis={'title':'vazão'})
+NameError: name 'self' is not defined
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: D; reducao: 1
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: D; reducao: 1
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: D; reducao: 1
+ERROR:django.request:Internal Server Error: /posto/56/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 84, in seleciona_dados_posto
+    'layout':Layout(title=ecohidro.serie_reduzida.__str__(),xaxis={'title':'tempo'},yaxis={'title':'vazão'})
+  File "C:\Projetos\hidrocomp\data\models.py", line 131, in __str__
+    self.serie_original.variavel,self.serie_original.unidade)
+TypeError: not all arguments converted during string formatting
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: D; reducao: 1
+ERROR:django.request:Internal Server Error: /posto/56/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 85, in seleciona_dados_posto
+    %(str(ecohidro.serie_reduzida.original.variavel),str(ecohidro.serie_reduzida.original.unidade))})
+AttributeError: 'SerieReduzida' object has no attribute 'original'
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: D; reducao: 1
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: MS; reducao: 1
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /postos/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /postos/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: MS; reducao: 2
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: MS; reducao: 2
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: D; reducao: 1
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: D; reducao: 9999
+ERROR:django.request:Internal Server Error: /posto/11/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 70, in seleciona_dados_posto
+    int(dados['variavel']),dados['discretizacao'],int(dados['reducao']))
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 79, in pegar_serie_original
+    self.reducao = Reducao.objects.get(id=reducao_id)
+  File "C:\Python36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+data.models.DoesNotExist: Reducao matching query does not exist.
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: D; reducao: 9999
+ERROR:django.request:Internal Server Error: /posto/11/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 70, in seleciona_dados_posto
+    int(dados['variavel']),dados['discretizacao'],int(dados['reducao']))
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 79, in pegar_serie_original
+    self.reducao = Reducao.objects.get(id=reducao_id)
+  File "C:\Python36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+data.models.DoesNotExist: Reducao matching query does not exist.
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: D; reducao: 9999
+ERROR:django.request:Internal Server Error: /posto/11/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 66, in seleciona_dados_posto
+    int(dados['variavel']),dados['tipo_media_movel'],int(dados['discretizacao_media_movel']))
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 106, in pegar_serie_original
+    self.discretizacao = Discretizacao.objects.get(codigo_pandas=codigo_discretizacao)
+  File "C:\Python36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 380, in get
+    self.model._meta.object_name
+data.models.DoesNotExist: Discretizacao matching query does not exist.
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: D; reducao: 9999
+ERROR:django.request:Internal Server Error: /posto/11/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 66, in seleciona_dados_posto
+    int(dados['variavel']),dados['tipo_media_movel'],int(dados['discretizacao_media_movel']))
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 107, in pegar_serie_original
+    self.reducao = Reducao.objects.get(tipo=tipo_media_movel+" média móvel")
+NameError: name 'tipo_media_movel' is not defined
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: D; reducao: 9999
+ERROR:django.request:Internal Server Error: /posto/11/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 73, in seleciona_dados_posto
+    reduzida = ecohidro.obter_series_reduzidas()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 65, in obter_series_reduzidas
+    serie_original = self.original,discretizacao=self.discretizacao,reducao=self.reducao)
+AttributeError: 'MediaMovel' object has no attribute 'discretizacao'
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: D; reducao: 9999
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: D; reducao: 9999
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: D; reducao: 1
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /postos/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/46/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: D; reducao: 1
+WARNING:django.request:Not Found: /posto/46/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: D; reducao: 2
+WARNING:django.request:Not Found: /posto/46/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /postos/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+ERROR:django.request:Internal Server Error: /posto/56/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 50, in seleciona_dados_posto
+    1,10)
+TypeError: pegar_serie_original() missing 1 required positional argument: 'reducao_id'
+ERROR:django.request:Internal Server Error: /posto/56/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 51, in seleciona_dados_posto
+    reduzida = ecohidro.obter_series_reduzidas()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 67, in obter_series_reduzidas
+    serie_original = self.original,discretizacao=self.discretizacao,reducao=self.reducao)
+AttributeError: 'EstatisticaBasica' object has no attribute 'original'
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+ERROR:django.request:Internal Server Error: /posto/56/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 52, in seleciona_dados_posto
+    resultado = SerieTemporal.objects.filter(Id=reduzida[0].serie_temporal_id)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 289, in __getitem__
+    return list(qs)[0]
+IndexError: list index out of range
+ERROR:django.request:Internal Server Error: /posto/56/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 52, in seleciona_dados_posto
+    resultado = a.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 148, in prepara_serie_reduzida
+    anos_hidrologicos = self.dicionario_de_anos_hidrologicos(médias_móveis_por_dia)
+NameError: name 'médias_móveis_por_dia' is not defined
+ERROR:django.request:Internal Server Error: /posto/56/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\base.py", line 2434, in get_value
+    return libts.get_value_box(s, key)
+  File "pandas\_libs\tslib.pyx", line 923, in pandas._libs.tslib.get_value_box (pandas\_libs\tslib.c:18843)
+  File "pandas\_libs\tslib.pyx", line 932, in pandas._libs.tslib.get_value_box (pandas\_libs\tslib.c:18477)
+TypeError: 'str' object cannot be interpreted as an integer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1377, in get_value
+    return _maybe_box(self, Index.get_value(self, series, key),
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\base.py", line 2442, in get_value
+    raise e1
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\base.py", line 2428, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 98, in pandas._libs.index.IndexEngine.get_value (pandas\_libs\index.c:4363)
+  File "pandas\_libs\index.pyx", line 106, in pandas._libs.index.IndexEngine.get_value (pandas\_libs\index.c:4046)
+  File "pandas\_libs\index.pyx", line 474, in pandas._libs.index.DatetimeEngine.get_loc (pandas\_libs\index.c:10066)
+  File "pandas\_libs\index.pyx", line 480, in pandas._libs.index.DatetimeEngine._date_check_type (pandas\_libs\index.c:10230)
+KeyError: 'dado'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "pandas\_libs\tslib.pyx", line 1567, in pandas._libs.tslib.convert_str_to_tsobject (pandas\_libs\tslib.c:29306)
+  File "pandas\_libs\src\datetime.pxd", line 135, in datetime._string_to_dts (pandas\_libs\tslib.c:95243)
+ValueError: Error parsing datetime string "dado" at position 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "pandas\_libs\tslib.pyx", line 1589, in pandas._libs.tslib.convert_str_to_tsobject (pandas\_libs\tslib.c:29750)
+  File "pandas\_libs\tslib.pyx", line 1955, in pandas._libs.tslib.parse_datetime_string (pandas\_libs\tslib.c:35351)
+  File "C:\Python36\lib\site-packages\dateutil\parser.py", line 1168, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "C:\Python36\lib\site-packages\dateutil\parser.py", line 559, in parse
+    raise ValueError("Unknown string format")
+ValueError: Unknown string format
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1387, in get_value
+    return self.get_value_maybe_box(series, key)
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1394, in get_value_maybe_box
+    key = Timestamp(key, tz=self.tz)
+  File "pandas\_libs\tslib.pyx", line 402, in pandas._libs.tslib.Timestamp.__new__ (pandas\_libs\tslib.c:10051)
+  File "pandas\_libs\tslib.pyx", line 1451, in pandas._libs.tslib.convert_to_tsobject (pandas\_libs\tslib.c:27453)
+  File "pandas\_libs\tslib.pyx", line 1592, in pandas._libs.tslib.convert_str_to_tsobject (pandas\_libs\tslib.c:29803)
+ValueError: could not convert string to Timestamp
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 52, in seleciona_dados_posto
+    resultado = a.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 153, in prepara_serie_reduzida
+    df['dif'] = df['dado'] - df['dado'].shift(1)
+  File "C:\Python36\lib\site-packages\pandas\core\series.py", line 601, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1389, in get_value
+    raise KeyError(key)
+KeyError: 'dado'
+ERROR:django.request:Internal Server Error: /posto/56/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\base.py", line 2434, in get_value
+    return libts.get_value_box(s, key)
+  File "pandas\_libs\tslib.pyx", line 923, in pandas._libs.tslib.get_value_box (pandas\_libs\tslib.c:18843)
+  File "pandas\_libs\tslib.pyx", line 932, in pandas._libs.tslib.get_value_box (pandas\_libs\tslib.c:18477)
+TypeError: 'str' object cannot be interpreted as an integer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1377, in get_value
+    return _maybe_box(self, Index.get_value(self, series, key),
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\base.py", line 2442, in get_value
+    raise e1
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\base.py", line 2428, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 98, in pandas._libs.index.IndexEngine.get_value (pandas\_libs\index.c:4363)
+  File "pandas\_libs\index.pyx", line 106, in pandas._libs.index.IndexEngine.get_value (pandas\_libs\index.c:4046)
+  File "pandas\_libs\index.pyx", line 474, in pandas._libs.index.DatetimeEngine.get_loc (pandas\_libs\index.c:10066)
+  File "pandas\_libs\index.pyx", line 480, in pandas._libs.index.DatetimeEngine._date_check_type (pandas\_libs\index.c:10230)
+KeyError: 'dado'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "pandas\_libs\tslib.pyx", line 1567, in pandas._libs.tslib.convert_str_to_tsobject (pandas\_libs\tslib.c:29306)
+  File "pandas\_libs\src\datetime.pxd", line 135, in datetime._string_to_dts (pandas\_libs\tslib.c:95243)
+ValueError: Error parsing datetime string "dado" at position 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "pandas\_libs\tslib.pyx", line 1589, in pandas._libs.tslib.convert_str_to_tsobject (pandas\_libs\tslib.c:29750)
+  File "pandas\_libs\tslib.pyx", line 1955, in pandas._libs.tslib.parse_datetime_string (pandas\_libs\tslib.c:35351)
+  File "C:\Python36\lib\site-packages\dateutil\parser.py", line 1168, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "C:\Python36\lib\site-packages\dateutil\parser.py", line 559, in parse
+    raise ValueError("Unknown string format")
+ValueError: Unknown string format
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1387, in get_value
+    return self.get_value_maybe_box(series, key)
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1394, in get_value_maybe_box
+    key = Timestamp(key, tz=self.tz)
+  File "pandas\_libs\tslib.pyx", line 402, in pandas._libs.tslib.Timestamp.__new__ (pandas\_libs\tslib.c:10051)
+  File "pandas\_libs\tslib.pyx", line 1451, in pandas._libs.tslib.convert_to_tsobject (pandas\_libs\tslib.c:27453)
+  File "pandas\_libs\tslib.pyx", line 1592, in pandas._libs.tslib.convert_str_to_tsobject (pandas\_libs\tslib.c:29803)
+ValueError: could not convert string to Timestamp
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 52, in seleciona_dados_posto
+    resultado = a.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 154, in prepara_serie_reduzida
+    df['dif'] = df['dado'] - df['dado'].shift(1)
+  File "C:\Python36\lib\site-packages\pandas\core\series.py", line 601, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1389, in get_value
+    raise KeyError(key)
+KeyError: 'dado'
+ERROR:django.request:Internal Server Error: /posto/56/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\base.py", line 2434, in get_value
+    return libts.get_value_box(s, key)
+  File "pandas\_libs\tslib.pyx", line 923, in pandas._libs.tslib.get_value_box (pandas\_libs\tslib.c:18843)
+  File "pandas\_libs\tslib.pyx", line 932, in pandas._libs.tslib.get_value_box (pandas\_libs\tslib.c:18477)
+TypeError: 'str' object cannot be interpreted as an integer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1377, in get_value
+    return _maybe_box(self, Index.get_value(self, series, key),
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\base.py", line 2442, in get_value
+    raise e1
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\base.py", line 2428, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 98, in pandas._libs.index.IndexEngine.get_value (pandas\_libs\index.c:4363)
+  File "pandas\_libs\index.pyx", line 106, in pandas._libs.index.IndexEngine.get_value (pandas\_libs\index.c:4046)
+  File "pandas\_libs\index.pyx", line 474, in pandas._libs.index.DatetimeEngine.get_loc (pandas\_libs\index.c:10066)
+  File "pandas\_libs\index.pyx", line 480, in pandas._libs.index.DatetimeEngine._date_check_type (pandas\_libs\index.c:10230)
+KeyError: 'dado'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "pandas\_libs\tslib.pyx", line 1567, in pandas._libs.tslib.convert_str_to_tsobject (pandas\_libs\tslib.c:29306)
+  File "pandas\_libs\src\datetime.pxd", line 135, in datetime._string_to_dts (pandas\_libs\tslib.c:95243)
+ValueError: Error parsing datetime string "dado" at position 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "pandas\_libs\tslib.pyx", line 1589, in pandas._libs.tslib.convert_str_to_tsobject (pandas\_libs\tslib.c:29750)
+  File "pandas\_libs\tslib.pyx", line 1955, in pandas._libs.tslib.parse_datetime_string (pandas\_libs\tslib.c:35351)
+  File "C:\Python36\lib\site-packages\dateutil\parser.py", line 1168, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "C:\Python36\lib\site-packages\dateutil\parser.py", line 559, in parse
+    raise ValueError("Unknown string format")
+ValueError: Unknown string format
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1387, in get_value
+    return self.get_value_maybe_box(series, key)
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1394, in get_value_maybe_box
+    key = Timestamp(key, tz=self.tz)
+  File "pandas\_libs\tslib.pyx", line 402, in pandas._libs.tslib.Timestamp.__new__ (pandas\_libs\tslib.c:10051)
+  File "pandas\_libs\tslib.pyx", line 1451, in pandas._libs.tslib.convert_to_tsobject (pandas\_libs\tslib.c:27453)
+  File "pandas\_libs\tslib.pyx", line 1592, in pandas._libs.tslib.convert_str_to_tsobject (pandas\_libs\tslib.c:29803)
+ValueError: could not convert string to Timestamp
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 52, in seleciona_dados_posto
+    resultado = a.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 154, in prepara_serie_reduzida
+    df['dif'] = df['dado'] - df['dado'].shift(1)
+  File "C:\Python36\lib\site-packages\pandas\core\series.py", line 601, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1389, in get_value
+    raise KeyError(key)
+KeyError: 'dado'
+ERROR:django.request:Internal Server Error: /posto/56/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\base.py", line 2434, in get_value
+    return libts.get_value_box(s, key)
+  File "pandas\_libs\tslib.pyx", line 923, in pandas._libs.tslib.get_value_box (pandas\_libs\tslib.c:18843)
+  File "pandas\_libs\tslib.pyx", line 932, in pandas._libs.tslib.get_value_box (pandas\_libs\tslib.c:18477)
+TypeError: 'str' object cannot be interpreted as an integer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1377, in get_value
+    return _maybe_box(self, Index.get_value(self, series, key),
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\base.py", line 2442, in get_value
+    raise e1
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\base.py", line 2428, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 98, in pandas._libs.index.IndexEngine.get_value (pandas\_libs\index.c:4363)
+  File "pandas\_libs\index.pyx", line 106, in pandas._libs.index.IndexEngine.get_value (pandas\_libs\index.c:4046)
+  File "pandas\_libs\index.pyx", line 474, in pandas._libs.index.DatetimeEngine.get_loc (pandas\_libs\index.c:10066)
+  File "pandas\_libs\index.pyx", line 480, in pandas._libs.index.DatetimeEngine._date_check_type (pandas\_libs\index.c:10230)
+KeyError: 'dado'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "pandas\_libs\tslib.pyx", line 1567, in pandas._libs.tslib.convert_str_to_tsobject (pandas\_libs\tslib.c:29306)
+  File "pandas\_libs\src\datetime.pxd", line 135, in datetime._string_to_dts (pandas\_libs\tslib.c:95243)
+ValueError: Error parsing datetime string "dado" at position 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "pandas\_libs\tslib.pyx", line 1589, in pandas._libs.tslib.convert_str_to_tsobject (pandas\_libs\tslib.c:29750)
+  File "pandas\_libs\tslib.pyx", line 1955, in pandas._libs.tslib.parse_datetime_string (pandas\_libs\tslib.c:35351)
+  File "C:\Python36\lib\site-packages\dateutil\parser.py", line 1168, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "C:\Python36\lib\site-packages\dateutil\parser.py", line 559, in parse
+    raise ValueError("Unknown string format")
+ValueError: Unknown string format
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1387, in get_value
+    return self.get_value_maybe_box(series, key)
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1394, in get_value_maybe_box
+    key = Timestamp(key, tz=self.tz)
+  File "pandas\_libs\tslib.pyx", line 402, in pandas._libs.tslib.Timestamp.__new__ (pandas\_libs\tslib.c:10051)
+  File "pandas\_libs\tslib.pyx", line 1451, in pandas._libs.tslib.convert_to_tsobject (pandas\_libs\tslib.c:27453)
+  File "pandas\_libs\tslib.pyx", line 1592, in pandas._libs.tslib.convert_str_to_tsobject (pandas\_libs\tslib.c:29803)
+ValueError: could not convert string to Timestamp
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 52, in seleciona_dados_posto
+    resultado = a.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 154, in prepara_serie_reduzida
+    df['dif'] = df['dado'] - df['dado'].shift(1)
+  File "C:\Python36\lib\site-packages\pandas\core\series.py", line 601, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1389, in get_value
+    raise KeyError(key)
+KeyError: 'dado'
+ERROR:django.request:Internal Server Error: /posto/56/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\base.py", line 2434, in get_value
+    return libts.get_value_box(s, key)
+  File "pandas\_libs\tslib.pyx", line 923, in pandas._libs.tslib.get_value_box (pandas\_libs\tslib.c:18843)
+  File "pandas\_libs\tslib.pyx", line 932, in pandas._libs.tslib.get_value_box (pandas\_libs\tslib.c:18477)
+TypeError: 'str' object cannot be interpreted as an integer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1377, in get_value
+    return _maybe_box(self, Index.get_value(self, series, key),
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\base.py", line 2442, in get_value
+    raise e1
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\base.py", line 2428, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 98, in pandas._libs.index.IndexEngine.get_value (pandas\_libs\index.c:4363)
+  File "pandas\_libs\index.pyx", line 106, in pandas._libs.index.IndexEngine.get_value (pandas\_libs\index.c:4046)
+  File "pandas\_libs\index.pyx", line 474, in pandas._libs.index.DatetimeEngine.get_loc (pandas\_libs\index.c:10066)
+  File "pandas\_libs\index.pyx", line 480, in pandas._libs.index.DatetimeEngine._date_check_type (pandas\_libs\index.c:10230)
+KeyError: 'dado'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "pandas\_libs\tslib.pyx", line 1567, in pandas._libs.tslib.convert_str_to_tsobject (pandas\_libs\tslib.c:29306)
+  File "pandas\_libs\src\datetime.pxd", line 135, in datetime._string_to_dts (pandas\_libs\tslib.c:95243)
+ValueError: Error parsing datetime string "dado" at position 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "pandas\_libs\tslib.pyx", line 1589, in pandas._libs.tslib.convert_str_to_tsobject (pandas\_libs\tslib.c:29750)
+  File "pandas\_libs\tslib.pyx", line 1955, in pandas._libs.tslib.parse_datetime_string (pandas\_libs\tslib.c:35351)
+  File "C:\Python36\lib\site-packages\dateutil\parser.py", line 1168, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "C:\Python36\lib\site-packages\dateutil\parser.py", line 559, in parse
+    raise ValueError("Unknown string format")
+ValueError: Unknown string format
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1387, in get_value
+    return self.get_value_maybe_box(series, key)
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1394, in get_value_maybe_box
+    key = Timestamp(key, tz=self.tz)
+  File "pandas\_libs\tslib.pyx", line 402, in pandas._libs.tslib.Timestamp.__new__ (pandas\_libs\tslib.c:10051)
+  File "pandas\_libs\tslib.pyx", line 1451, in pandas._libs.tslib.convert_to_tsobject (pandas\_libs\tslib.c:27453)
+  File "pandas\_libs\tslib.pyx", line 1592, in pandas._libs.tslib.convert_str_to_tsobject (pandas\_libs\tslib.c:29803)
+ValueError: could not convert string to Timestamp
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 52, in seleciona_dados_posto
+    resultado = a.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 154, in prepara_serie_reduzida
+    df['dif'] = df['dado'] - df['dado'].shift(1)
+  File "C:\Python36\lib\site-packages\pandas\core\series.py", line 601, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1389, in get_value
+    raise KeyError(key)
+KeyError: 'dado'
+ERROR:django.request:Internal Server Error: /posto/56/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\base.py", line 2434, in get_value
+    return libts.get_value_box(s, key)
+  File "pandas\_libs\tslib.pyx", line 923, in pandas._libs.tslib.get_value_box (pandas\_libs\tslib.c:18843)
+  File "pandas\_libs\tslib.pyx", line 932, in pandas._libs.tslib.get_value_box (pandas\_libs\tslib.c:18477)
+TypeError: 'str' object cannot be interpreted as an integer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1377, in get_value
+    return _maybe_box(self, Index.get_value(self, series, key),
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\base.py", line 2442, in get_value
+    raise e1
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\base.py", line 2428, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 98, in pandas._libs.index.IndexEngine.get_value (pandas\_libs\index.c:4363)
+  File "pandas\_libs\index.pyx", line 106, in pandas._libs.index.IndexEngine.get_value (pandas\_libs\index.c:4046)
+  File "pandas\_libs\index.pyx", line 474, in pandas._libs.index.DatetimeEngine.get_loc (pandas\_libs\index.c:10066)
+  File "pandas\_libs\index.pyx", line 480, in pandas._libs.index.DatetimeEngine._date_check_type (pandas\_libs\index.c:10230)
+KeyError: 'dado'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "pandas\_libs\tslib.pyx", line 1567, in pandas._libs.tslib.convert_str_to_tsobject (pandas\_libs\tslib.c:29306)
+  File "pandas\_libs\src\datetime.pxd", line 135, in datetime._string_to_dts (pandas\_libs\tslib.c:95243)
+ValueError: Error parsing datetime string "dado" at position 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "pandas\_libs\tslib.pyx", line 1589, in pandas._libs.tslib.convert_str_to_tsobject (pandas\_libs\tslib.c:29750)
+  File "pandas\_libs\tslib.pyx", line 1955, in pandas._libs.tslib.parse_datetime_string (pandas\_libs\tslib.c:35351)
+  File "C:\Python36\lib\site-packages\dateutil\parser.py", line 1168, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "C:\Python36\lib\site-packages\dateutil\parser.py", line 559, in parse
+    raise ValueError("Unknown string format")
+ValueError: Unknown string format
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1387, in get_value
+    return self.get_value_maybe_box(series, key)
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1394, in get_value_maybe_box
+    key = Timestamp(key, tz=self.tz)
+  File "pandas\_libs\tslib.pyx", line 402, in pandas._libs.tslib.Timestamp.__new__ (pandas\_libs\tslib.c:10051)
+  File "pandas\_libs\tslib.pyx", line 1451, in pandas._libs.tslib.convert_to_tsobject (pandas\_libs\tslib.c:27453)
+  File "pandas\_libs\tslib.pyx", line 1592, in pandas._libs.tslib.convert_str_to_tsobject (pandas\_libs\tslib.c:29803)
+ValueError: could not convert string to Timestamp
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 52, in seleciona_dados_posto
+    resultado = a.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 156, in prepara_serie_reduzida
+    df['dif'] = df['dado'] - df['dado'].shift(1)
+  File "C:\Python36\lib\site-packages\pandas\core\series.py", line 601, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1389, in get_value
+    raise KeyError(key)
+KeyError: 'dado'
+ERROR:django.request:Internal Server Error: /posto/56/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\base.py", line 2434, in get_value
+    return libts.get_value_box(s, key)
+  File "pandas\_libs\tslib.pyx", line 923, in pandas._libs.tslib.get_value_box (pandas\_libs\tslib.c:18843)
+  File "pandas\_libs\tslib.pyx", line 932, in pandas._libs.tslib.get_value_box (pandas\_libs\tslib.c:18477)
+TypeError: 'str' object cannot be interpreted as an integer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1377, in get_value
+    return _maybe_box(self, Index.get_value(self, series, key),
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\base.py", line 2442, in get_value
+    raise e1
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\base.py", line 2428, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 98, in pandas._libs.index.IndexEngine.get_value (pandas\_libs\index.c:4363)
+  File "pandas\_libs\index.pyx", line 106, in pandas._libs.index.IndexEngine.get_value (pandas\_libs\index.c:4046)
+  File "pandas\_libs\index.pyx", line 474, in pandas._libs.index.DatetimeEngine.get_loc (pandas\_libs\index.c:10066)
+  File "pandas\_libs\index.pyx", line 480, in pandas._libs.index.DatetimeEngine._date_check_type (pandas\_libs\index.c:10230)
+KeyError: 'dado'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "pandas\_libs\tslib.pyx", line 1567, in pandas._libs.tslib.convert_str_to_tsobject (pandas\_libs\tslib.c:29306)
+  File "pandas\_libs\src\datetime.pxd", line 135, in datetime._string_to_dts (pandas\_libs\tslib.c:95243)
+ValueError: Error parsing datetime string "dado" at position 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "pandas\_libs\tslib.pyx", line 1589, in pandas._libs.tslib.convert_str_to_tsobject (pandas\_libs\tslib.c:29750)
+  File "pandas\_libs\tslib.pyx", line 1955, in pandas._libs.tslib.parse_datetime_string (pandas\_libs\tslib.c:35351)
+  File "C:\Python36\lib\site-packages\dateutil\parser.py", line 1168, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "C:\Python36\lib\site-packages\dateutil\parser.py", line 559, in parse
+    raise ValueError("Unknown string format")
+ValueError: Unknown string format
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1387, in get_value
+    return self.get_value_maybe_box(series, key)
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1394, in get_value_maybe_box
+    key = Timestamp(key, tz=self.tz)
+  File "pandas\_libs\tslib.pyx", line 402, in pandas._libs.tslib.Timestamp.__new__ (pandas\_libs\tslib.c:10051)
+  File "pandas\_libs\tslib.pyx", line 1451, in pandas._libs.tslib.convert_to_tsobject (pandas\_libs\tslib.c:27453)
+  File "pandas\_libs\tslib.pyx", line 1592, in pandas._libs.tslib.convert_str_to_tsobject (pandas\_libs\tslib.c:29803)
+ValueError: could not convert string to Timestamp
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 52, in seleciona_dados_posto
+    resultado = a.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 156, in prepara_serie_reduzida
+    df['dif'] = df['dado'] - df['dado'].shift(1)
+  File "C:\Python36\lib\site-packages\pandas\core\series.py", line 601, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1389, in get_value
+    raise KeyError(key)
+KeyError: 'dado'
+ERROR:django.request:Internal Server Error: /posto/56/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\base.py", line 2434, in get_value
+    return libts.get_value_box(s, key)
+  File "pandas\_libs\tslib.pyx", line 923, in pandas._libs.tslib.get_value_box (pandas\_libs\tslib.c:18843)
+  File "pandas\_libs\tslib.pyx", line 932, in pandas._libs.tslib.get_value_box (pandas\_libs\tslib.c:18477)
+TypeError: 'str' object cannot be interpreted as an integer
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1377, in get_value
+    return _maybe_box(self, Index.get_value(self, series, key),
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\base.py", line 2442, in get_value
+    raise e1
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\base.py", line 2428, in get_value
+    tz=getattr(series.dtype, 'tz', None))
+  File "pandas\_libs\index.pyx", line 98, in pandas._libs.index.IndexEngine.get_value (pandas\_libs\index.c:4363)
+  File "pandas\_libs\index.pyx", line 106, in pandas._libs.index.IndexEngine.get_value (pandas\_libs\index.c:4046)
+  File "pandas\_libs\index.pyx", line 474, in pandas._libs.index.DatetimeEngine.get_loc (pandas\_libs\index.c:10066)
+  File "pandas\_libs\index.pyx", line 480, in pandas._libs.index.DatetimeEngine._date_check_type (pandas\_libs\index.c:10230)
+KeyError: 'dado'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "pandas\_libs\tslib.pyx", line 1567, in pandas._libs.tslib.convert_str_to_tsobject (pandas\_libs\tslib.c:29306)
+  File "pandas\_libs\src\datetime.pxd", line 135, in datetime._string_to_dts (pandas\_libs\tslib.c:95243)
+ValueError: Error parsing datetime string "dado" at position 0
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "pandas\_libs\tslib.pyx", line 1589, in pandas._libs.tslib.convert_str_to_tsobject (pandas\_libs\tslib.c:29750)
+  File "pandas\_libs\tslib.pyx", line 1955, in pandas._libs.tslib.parse_datetime_string (pandas\_libs\tslib.c:35351)
+  File "C:\Python36\lib\site-packages\dateutil\parser.py", line 1168, in parse
+    return DEFAULTPARSER.parse(timestr, **kwargs)
+  File "C:\Python36\lib\site-packages\dateutil\parser.py", line 559, in parse
+    raise ValueError("Unknown string format")
+ValueError: Unknown string format
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1387, in get_value
+    return self.get_value_maybe_box(series, key)
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1394, in get_value_maybe_box
+    key = Timestamp(key, tz=self.tz)
+  File "pandas\_libs\tslib.pyx", line 402, in pandas._libs.tslib.Timestamp.__new__ (pandas\_libs\tslib.c:10051)
+  File "pandas\_libs\tslib.pyx", line 1451, in pandas._libs.tslib.convert_to_tsobject (pandas\_libs\tslib.c:27453)
+  File "pandas\_libs\tslib.pyx", line 1592, in pandas._libs.tslib.convert_str_to_tsobject (pandas\_libs\tslib.c:29803)
+ValueError: could not convert string to Timestamp
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 52, in seleciona_dados_posto
+    resultado = a.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 156, in prepara_serie_reduzida
+    df['dif'] = df['dado'] - df['dado'].shift(1)
+  File "C:\Python36\lib\site-packages\pandas\core\series.py", line 601, in __getitem__
+    result = self.index.get_value(self, key)
+  File "C:\Python36\lib\site-packages\pandas\core\indexes\datetimes.py", line 1389, in get_value
+    raise KeyError(key)
+KeyError: 'dado'
+ERROR:django.request:Internal Server Error: /posto/56/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 52, in seleciona_dados_posto
+    resultado = a.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 160, in prepara_serie_reduzida
+    Id = self.criar_temporal(dados,datas)
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 53, in criar_temporal
+    SerieTemporal(Id = Id,data_e_hora = e[0],dado = e[1]) for e in dados_temporais if not e[0] is nan
+  File "C:\Python36\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 443, in bulk_create
+    ids = self._batched_insert(objs_without_pk, fields, batch_size)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 1080, in _batched_insert
+    inserted_id = self._insert(item, fields=fields, using=self.db, return_id=True)
+  File "C:\Python36\lib\site-packages\django\db\models\query.py", line 1063, in _insert
+    return query.get_compiler(using=using).execute_sql(return_id)
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1098, in execute_sql
+    for sql, params in self.as_sql():
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1051, in as_sql
+    for obj in self.query.objs
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1051, in <listcomp>
+    for obj in self.query.objs
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 1050, in <listcomp>
+    [self.prepare_value(field, self.pre_save_val(field, obj)) for field in fields]
+  File "C:\Python36\lib\site-packages\django\db\models\sql\compiler.py", line 990, in prepare_value
+    value = field.get_db_prep_save(value, connection=self.connection)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 770, in get_db_prep_save
+    prepared=False)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 762, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\Python36\lib\site-packages\django\db\models\fields\__init__.py", line 1781, in get_prep_value
+    return float(value)
+  File "C:\Python36\lib\site-packages\pandas\core\series.py", line 97, in wrapper
+    "{0}".format(str(converter)))
+TypeError: cannot convert the series to <class 'float'>
+ERROR:django.request:Internal Server Error: /posto/56/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 52, in seleciona_dados_posto
+    resultado = a.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 158, in prepara_serie_reduzida
+    dados.append(float(df[df['dif']>0].mean()))
+  File "C:\Python36\lib\site-packages\pandas\core\series.py", line 97, in wrapper
+    "{0}".format(str(converter)))
+TypeError: cannot convert the series to <class 'float'>
+ERROR:django.request:Internal Server Error: /posto/56/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 52, in seleciona_dados_posto
+    resultado = a.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 160, in prepara_serie_reduzida
+    dados.append(float(r))
+  File "C:\Python36\lib\site-packages\pandas\core\series.py", line 97, in wrapper
+    "{0}".format(str(converter)))
+TypeError: cannot convert the series to <class 'float'>
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+ERROR:django.request:Internal Server Error: /posto/56/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 52, in seleciona_dados_posto
+    print(resultado)
+UnboundLocalError: local variable 'resultado' referenced before assignment
+ERROR:django.request:Internal Server Error: /posto/56/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 52, in seleciona_dados_posto
+    print(resultado)
+UnboundLocalError: local variable 'resultado' referenced before assignment
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: D; reducao: 1
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: MS; reducao: 1
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: D; reducao: 1
+ERROR:django.request:Internal Server Error: /posto/56/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 75, in seleciona_dados_posto
+    original = ecohidro.pegar_serie_original(int(dados['variavel']))
+TypeError: pegar_serie_original() takes 2 positional arguments but 4 were given
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: D; reducao: 1
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: MS; reducao: 1
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: AS; reducao: 1
+WARNING:django.request:Not Found: /posto/56/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /postos/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: D; reducao: 1
+ERROR:django.request:Internal Server Error: /posto/11/seleciona_dados/
+Traceback (most recent call last):
+  File "C:\Python36\lib\site-packages\django\core\handlers\exception.py", line 41, in inner
+    response = get_response(request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 187, in _get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "C:\Python36\lib\site-packages\django\core\handlers\base.py", line 185, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Projetos\hidrocomp\ecohydro\views.py", line 84, in seleciona_dados_posto
+    resultado = ecohidro.prepara_serie_reduzida()
+  File "C:\Projetos\hidrocomp\ecohydro\ecohidro.py", line 105, in prepara_serie_reduzida
+    return self.dados_temporais(dados,datas)
+TypeError: 'QuerySet' object is not callable
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 1; discretização: D; reducao: 1
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
+INFO:root:$ Selecionado pelo usuario: variável: 2; discretização: D; reducao: 1
+WARNING:django.request:Not Found: /posto/11/seleciona_dados/static/js/ie-emulation-modes-warning.js
+WARNING:django.request:Not Found: /posto/dist/js/bootstrap.min.js
+WARNING:django.request:Not Found: /posto/assets/js/ie10-viewport-bug-workaround.js
